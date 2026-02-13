@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { PageHeader } from '../components/Common/PageHeader'
 import { CTAButton } from '../components/Common/CTAButton'
 

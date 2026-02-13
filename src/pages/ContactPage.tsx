@@ -1,4 +1,3 @@
-import React from 'react'
 import { PageHeader } from '../components/Common/PageHeader'
 import { ContactForm } from '../components/Contact/ContactForm'
 import { CTAButton } from '../components/Common/CTAButton'

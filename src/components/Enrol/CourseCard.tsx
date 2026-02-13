@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Course } from '../../context/CartContext'
 import { CTAButton } from '../Common/CTAButton'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { CTAButton } from '../components/Common/CTAButton'
 import { PageHeader } from '../components/Common/PageHeader'
 import logo from '../assets/logo.png'
