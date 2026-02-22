@@ -3,6 +3,7 @@ import { Layout } from './components/Layout/Layout'
 import { HomePage } from './pages/HomePage'
 import { WhoWeArePage } from './pages/WhoWeArePage'
 import { ProgramsPage } from './pages/ProgramsPage'
+import { ProgramDetailPage } from './pages/ProgramDetailPage'
 import { EnrolPage } from './pages/EnrolPage'
 import { ContactPage } from './pages/ContactPage'
 import { IntroSessionsPage } from './pages/IntroSessionsPage'
@@ -20,6 +21,7 @@ export function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/who-we-are" element={<WhoWeArePage />} />
             <Route path="/programs" element={<ProgramsPage />} />
+            <Route path="/programs/:slug" element={<ProgramDetailPage />} />
             <Route path="/enrol" element={<EnrolPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/intro-sessions" element={<IntroSessionsPage />} />
