@@ -9,12 +9,13 @@ export function AuthPage() {
 
   return (
     <div className="page auth-page">
-      <PageHeader
-        title="Welcome to TillSkill"
-        subtitle="Access your learning dashboard, live classes, and resources."
-      />
-
-      <section className="section auth-panel">
+      <section className="section">
+        <div className="container">
+          <PageHeader
+            title="Welcome to TillSkill"
+            subtitle="Access your learning dashboard, live classes, and resources."
+          />
+      <div className="auth-panel">
         <div className="auth-tabs">
           <button
             type="button"
@@ -86,6 +87,8 @@ export function AuthPage() {
             </div>
           </form>
         )}
+      </div>
+        </div>
       </section>
     </div>
   )

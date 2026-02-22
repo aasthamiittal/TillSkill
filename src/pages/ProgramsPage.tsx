@@ -4,13 +4,13 @@ import { CTAButton } from '../components/Common/CTAButton'
 export function ProgramsPage() {
   return (
     <div className="page">
-      <PageHeader
-        title="Programs"
-        subtitle="From foundational finance to advanced management accounting and analytics."
-      />
-
       <section className="section">
-        <h2>US CMA: The Global Gold Standard</h2>
+        <div className="container">
+          <PageHeader
+            title="Programs"
+            subtitle="From foundational finance to advanced management accounting and analytics."
+          />
+          <h2>US CMA: The Global Gold Standard</h2>
         <p>
           The Certified Management Accountant (CMA) certification, awarded by the Institute of
           Management Accountants (IMA, USA), is the global benchmark for management accountants and
@@ -34,9 +34,11 @@ export function ProgramsPage() {
           Refer to our Terms &amp; Conditions for full details of our policies and accreditation
           status.
         </p>
+        </div>
       </section>
 
       <section className="section section-alt">
+        <div className="container">
         <h2>The TillSkill Advantage</h2>
         <p>
           AI is replacing jobs, not professionals. Our programs are designed to help you become the
@@ -66,9 +68,11 @@ export function ProgramsPage() {
             </p>
           </article>
         </div>
+        </div>
       </section>
 
       <section className="section">
+        <div className="container">
         <h2>Other Programs</h2>
         <div className="two-column">
           <div>
@@ -101,6 +105,7 @@ export function ProgramsPage() {
             </p>
             <CTAButton to="/contact">Tell us what you need</CTAButton>
           </div>
+        </div>
         </div>
       </section>
     </div>

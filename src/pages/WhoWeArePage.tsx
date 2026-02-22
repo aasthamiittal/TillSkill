@@ -3,13 +3,13 @@ import { PageHeader } from '../components/Common/PageHeader'
 export function WhoWeArePage() {
   return (
     <div className="page">
-      <PageHeader
-        title="Who We Are"
-        subtitle="Human-centred, globally experienced mentors preparing future boardroom leaders."
-      />
-
       <section className="section">
-        <h2>The New Challenge</h2>
+        <div className="container">
+          <PageHeader
+            title="Who We Are"
+            subtitle="Human-centred, globally experienced mentors preparing future boardroom leaders."
+          />
+          <h2>The New Challenge</h2>
         <p>
           The educational landscape is shifting rapidly, and not always for the better. We are
           witnessing a rush toward &quot;AI-first&quot; learning, where students rely on chatbots
@@ -22,9 +22,11 @@ export function WhoWeArePage() {
           &quot;fast food&quot; education that leaves them with a certificate but without the deep,
           practical understanding required to lead in the boardroom.
         </p>
+        </div>
       </section>
 
       <section className="section section-alt">
+        <div className="container">
         <h2>Enter TillSkill.com</h2>
         <p>
           TillSkill.com bridges this gap. We were founded on the belief that while tools change, the
@@ -35,12 +37,14 @@ export function WhoWeArePage() {
         <p>
           Our approach is built on genuine human interaction: small class sizes, personalised
           accountability, and mentors with decades of global industry experience who view you as a
-          future leader, not just a subscription number. We leverage technology to enhance your
+          future leader,           not just a subscription number. We leverage technology to enhance your
           learning, not to replace the teacher.
         </p>
+        </div>
       </section>
 
       <section className="section">
+        <div className="container">
         <h2>It&apos;s a Continuing Journey</h2>
         <p>
           Our vision extends far beyond the CMA qualification. We are building a comprehensive
@@ -52,9 +56,11 @@ export function WhoWeArePage() {
           transitions and organisational challenges, ensuring that your growth continues long after
           you have passed your exams.
         </p>
+        </div>
       </section>
 
       <section className="section section-alt">
+        <div className="container">
         <h2>We Hear You — Always</h2>
         <p>
           We are building this community for you. We welcome your suggestions for new courses or
@@ -65,9 +71,11 @@ export function WhoWeArePage() {
           refuse to compromise on quality—we promise that every suggestion will be seriously
           considered. Join us as we till your skills until you are ready to skill the world.
         </p>
+        </div>
       </section>
 
       <section id="terms" className="section">
+        <div className="container">
         <h2>Terms and Conditions of Service</h2>
         <p className="muted">
           Last Updated: January 16, 2026 &middot; Business Name: TillSkill™ &middot; Jurisdiction:
@@ -119,6 +127,7 @@ export function WhoWeArePage() {
           This is a high-level summary for website display. Please refer to your enrolment
           documentation for the full Terms and Conditions text.
         </p> */}
+        </div>
       </section>
     </div>
   )

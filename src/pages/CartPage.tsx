@@ -7,9 +7,9 @@ export function CartPage() {
 
   return (
     <div className="page">
-      <PageHeader title="Your Cart" subtitle="Review your selected programs before checkout." />
-
       <section className="section">
+        <div className="container">
+          <PageHeader title="Your Cart" subtitle="Review your selected programs before checkout." />
         {items.length === 0 ? (
           <p>Your cart is currently empty. Browse our programs and add a course to begin.</p>
         ) : (
@@ -39,6 +39,7 @@ export function CartPage() {
             </div>
           </>
         )}
+        </div>
       </section>
     </div>
   )
