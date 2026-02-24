@@ -12,13 +12,13 @@ export function StudySupportPage() {
 
   return (
     <div className="page">
-      <PageHeader
-        title="Study and Support"
-        subtitle="TillSkill students can book one-on-one doubt-clearing appointments with mentors."
-      />
-
-      <section className="section two-column">
+      <section className="section">
+        <div className="container two-column">
         <div>
+          <PageHeader
+            title="Study and Support"
+            subtitle="TillSkill students can book one-on-one doubt-clearing appointments with mentors."
+          />
           <h2>Need Help? Schedule Your Appointment.</h2>
           <p>
             Confused or facing challenges in your studies? Use this form to request a personal
@@ -126,6 +126,7 @@ export function StudySupportPage() {
               </div>
             </form>
           )}
+        </div>
         </div>
       </section>
     </div>

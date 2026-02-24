@@ -25,20 +25,22 @@ export function EnrolPage() {
 
   return (
     <div className="page">
-      <PageHeader
-        title="Enrol with TillSkill"
-        subtitle="Choose the cohort or session that fits your goals and schedule."
-      />
-
       <section className="section">
-        <p>
-          Our expert educational services are designed to provide personalised guidance and support,
-          ensuring students achieve their academic goals with confidence. Trust us to elevate your
-          learning experience through innovative and tailored solutions.
-        </p>
+        <div className="container">
+          <PageHeader
+            title="Enrol with TillSkill"
+            subtitle="Choose the cohort or session that fits your goals and schedule."
+          />
+          <p>
+            Our expert educational services are designed to provide personalised guidance and support,
+            ensuring students achieve their academic goals with confidence. Trust us to elevate your
+            learning experience through innovative and tailored solutions.
+          </p>
+        </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
+        <div className="container">
         <div className="filter-tabs">
           {filters.map((filter) => (
             <button
@@ -74,6 +76,7 @@ export function EnrolPage() {
               }
             />
           ))}
+        </div>
         </div>
       </section>
     </div>

@@ -12,8 +12,8 @@ export function Footer() {
           </p>
         </div>
         <div className="footer-links">
-          <Link to="/who-we-are">About</Link>
-          <Link to="/who-we-are#terms">Terms &amp; Conditions</Link>
+          <Link to="/about-us">About</Link>
+          <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>
           <Link to="/programs">Programs</Link>
           <Link to="/contact">Contact</Link>
         </div>

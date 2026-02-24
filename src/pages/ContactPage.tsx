@@ -5,12 +5,13 @@ import { CTAButton } from '../components/Common/CTAButton'
 export function ContactPage() {
   return (
     <div className="page">
-      <PageHeader
-        title="Contact TillSkill"
-        subtitle="Have questions about the US CMA or our other programs? We are here to help."
-      />
-
-      <section className="section two-column">
+      <section className="section">
+        <div className="container">
+          <PageHeader
+            title="Contact TillSkill"
+            subtitle="Have questions about the US CMA or our other programs? We are here to help."
+          />
+          <div className="two-column">
         <div>
           <h2>Let&apos;s talk about your goals</h2>
           <p>
@@ -31,6 +32,8 @@ export function ContactPage() {
         </div>
         <div>
           <ContactForm />
+        </div>
+          </div>
         </div>
       </section>
     </div>

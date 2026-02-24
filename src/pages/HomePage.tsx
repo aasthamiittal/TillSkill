@@ -6,34 +6,61 @@ export function HomePage() {
   return (
     <div className="page home-page">
       <section className="hero">
-        <div className="hero-text">
-          <p className="eyebrow">Australia’s Premier IMA Authorised Training Partner</p>
-          <h1>Be the Boardroom’s Most Valued Asset.</h1>
-          <p className="hero-subtitle">
-            Rise above accounting and reporting. Create value as a global management accountant.
-          </p>
-          <div className="hero-cta-group">
-            <CTAButton to="/enrol">Explore All Our Offerings</CTAButton>
-            <CTAButton to="/intro-sessions" variant="outline">
-              Join a Free Intro Session
-            </CTAButton>
-          </div>
-          <p className="hero-tagline">
-            TillSkill™ - Till Your Skill, Till You Skill
-          </p>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-logo-card">
-            <img src={logo} alt="TillSkill logo" className="hero-logo-image" />
-            <p className="hero-logo-caption">
-              Finance and management coaching from mentors with global boardroom
-              experience.
+        <div className="container">
+          <div className="hero-text">
+            <p className="eyebrow">Australia’s Premier IMA Authorised Training Partner</p>
+            <h1>Be the Boardroom’s Most Valued Asset.</h1>
+            <p className="hero-subtitle">
+              Rise above accounting and reporting. Create value as a global management accountant.
             </p>
+            <div className="hero-cta-group">
+              <CTAButton to="/enrol">Explore All Our Offerings</CTAButton>
+              <CTAButton to="/intro-sessions" variant="outline">
+                Join a Free Intro Session
+              </CTAButton>
+            </div>
+            <p className="hero-tagline">
+              TillSkill™ - Till Your Skill, Till You Skill
+            </p>
+          </div>
+          <div className="hero-visual">
+            <div className="hero-logo-card">
+              <img src={logo} alt="TillSkill logo" className="hero-logo-image" />
+              <p className="hero-logo-caption">
+                Finance and management coaching from mentors with global boardroom
+                experience.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section highlight-grid">
+      <section className="section">
+        <div className="container">
+          <div className="stats-strip">
+            <div className="stat-item">
+              <span className="stat-value">IMA</span>
+              <span className="stat-label">Silver Learning Partner</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-value">2-part</span>
+              <span className="stat-label">Exam · US CMA</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-value">Flexible</span>
+              <span className="stat-label">Study at your pace</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-value">Global</span>
+              <span className="stat-label">Boardroom-ready skills</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="container">
+          <div className="highlight-grid">
         <div className="highlight-card">
           <h2>The US CMA Certification</h2>
           <p>
@@ -61,13 +88,16 @@ export function HomePage() {
               <strong>Shared Responsibility:</strong> Limited batch sizes so no one is left behind.
             </li>
           </ul>
-          <CTAButton to="/who-we-are" variant="secondary">
+          <CTAButton to="/about-us" variant="secondary">
             Learn more
           </CTAButton>
         </div>
+          </div>
+        </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
+        <div className="container">
         <PageHeader
           title="IMA Silver Learning Partner Advantage"
           subtitle="Your curriculum and instruction aligned with what global examiners are testing today."
@@ -84,9 +114,11 @@ export function HomePage() {
             advantage designed to help you pass on your first attempt.
           </p>
         </div>
+        </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
+        <div className="container">
         <PageHeader
           title="No Tall Promises. Just Real Performance."
           subtitle="We promise only what we can fulfil: rigorous preparation, honest feedback, and genuine support."
@@ -113,6 +145,7 @@ export function HomePage() {
               controls and leads innovation.
             </p>
           </article>
+        </div>
         </div>
       </section>
     </div>

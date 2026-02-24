@@ -5,13 +5,13 @@ import { CTAButton } from '../components/Common/CTAButton'
 export function IntroSessionsPage() {
   return (
     <div className="page">
-      <PageHeader
-        title="Monthly Introductory Webinars"
-        subtitle="Get absolute clarity on the US CMA before you enrol."
-      />
-
       <section className="section">
-        <p>
+        <div className="container">
+          <PageHeader
+            title="Monthly Introductory Webinars"
+            subtitle="Get absolute clarity on the US CMA before you enrol."
+          />
+          <p>
           Want to know more before enrolling for the US CMA course? Join our monthly 1-hour
           Introductory Webinar where we answer your questions, such as:
         </p>
@@ -24,9 +24,11 @@ export function IntroSessionsPage() {
         <p className="muted">
           Don’t miss the special offer for attendees of this month’s webinar.
         </p>
+        </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
+        <div className="container">
         <div className="course-grid">
           {introSessions.map((session) => (
             <article key={session.id} className="course-card">
@@ -43,9 +45,11 @@ export function IntroSessionsPage() {
             </article>
           ))}
         </div>
+        </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
+        <div className="container">
         <blockquote className="testimonial">
           <p>
             “The webinar provided me absolute clarity on what career path I should take and why. All
@@ -62,6 +66,7 @@ export function IntroSessionsPage() {
           </p>
           <footer>Former Attendee</footer>
         </blockquote>
+        </div>
       </section>
     </div>
   )
