@@ -3,8 +3,8 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 
 const whoWeAreItems = [
-  { to: '/who-we-are', label: 'About Us' },
-  { to: '/who-we-are#terms', label: 'Terms & Conditions' },
+  { to: '/about-us', label: 'About Us' },
+  { to: '/terms-and-conditions', label: 'Terms & Conditions' },
 ]
 
 const programsItems = [
@@ -30,7 +30,7 @@ function isContactActive(pathname: string) {
 }
 
 function isWhoWeAreActive(pathname: string) {
-  return pathname === '/who-we-are'
+  return pathname === '/about-us' || pathname === '/terms-and-conditions'
 }
 
 export function Navbar() {

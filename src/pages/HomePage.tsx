@@ -43,12 +43,12 @@ export function HomePage() {
               <span className="stat-label">Silver Learning Partner</span>
             </div>
             <div className="stat-item">
-              <span className="stat-value">2</span>
-              <span className="stat-label">Exams · US CMA</span>
+              <span className="stat-value">2-part</span>
+              <span className="stat-label">Exam · US CMA</span>
             </div>
             <div className="stat-item">
-              <span className="stat-value">6–8</span>
-              <span className="stat-label">Months to complete</span>
+              <span className="stat-value">Flexible</span>
+              <span className="stat-label">Study at your pace</span>
             </div>
             <div className="stat-item">
               <span className="stat-value">Global</span>
@@ -88,7 +88,7 @@ export function HomePage() {
               <strong>Shared Responsibility:</strong> Limited batch sizes so no one is left behind.
             </li>
           </ul>
-          <CTAButton to="/who-we-are" variant="secondary">
+          <CTAButton to="/about-us" variant="secondary">
             Learn more
           </CTAButton>
         </div>

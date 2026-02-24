@@ -47,7 +47,7 @@ export function ProgramContent() {
             </CTAButton>
           </div>
           <p className="muted">
-            Refer to our <Link to="/who-we-are#terms">T&amp;C here</Link>.
+            Refer to our <Link to="/terms-and-conditions">T&amp;C here</Link>.
           </p>
         </div>
       </section>
