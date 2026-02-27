@@ -58,6 +58,36 @@ export function HomePage() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <div className="cma-summary">
+            <h2 className="cma-summary-title">US CMA: Certified Management Accountant</h2>
+            <div className="cma-summary-grid">
+              <div className="cma-summary-item">
+                <h3>Exam structure</h3>
+                <p>2 papers to clear – Part 1 and Part 2.</p>
+              </div>
+              <div className="cma-summary-item">
+                <h3>Typical timeline</h3>
+                <p>Many diligent learners complete their prep in 6–8 months.*</p>
+              </div>
+              <div className="cma-summary-item">
+                <h3>For students & professionals</h3>
+                <p>Live plus recorded sessions designed for working schedules.</p>
+              </div>
+              <div className="cma-summary-item">
+                <h3>1:1 doubt clearing</h3>
+                <p>Personalised guidance to keep you exam-ready at every step.</p>
+              </div>
+            </div>
+            <p className="cma-summary-footnote">
+              *Indicative only. Actual timelines and outcomes vary by learner, effort and exam
+              window selection.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="section section-alt">
         <div className="container">
           <div className="highlight-grid">
