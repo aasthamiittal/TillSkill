@@ -3,6 +3,9 @@ import { CTAButton } from '../components/Common/CTAButton'
 import { PageHeader } from '../components/Common/PageHeader'
 import { FAQAccordion, type FAQItem } from '../components/Common/FAQAccordion'
 import cmaImg from '../assets/cma-img.png'
+import fmaaImg from '../assets/fmaa-img.png'
+import cscaImg from '../assets/csca-img.png'
+import excelFinanceImg from '../assets/excel-finance-img.png'
 
 export const programSlugs = [
   { slug: 'us-cma', label: 'US CMA' },
@@ -403,10 +406,17 @@ function FmaaProgramContent() {
     <>
       <section className="section">
         <div className="container">
-          <PageHeader
-            title="FMAA with Tillskill™"
-            subtitle="Foundational Management Accounting and Analytics to prepare you for advanced professional designations."
-          />
+          <div className="program-hero">
+            <div className="program-hero-text">
+              <PageHeader
+                title="FMAA with Tillskill™"
+                subtitle="Foundational Management Accounting and Analytics to prepare you for advanced professional designations."
+              />
+            </div>
+            <div className="program-hero-logo">
+              <img src={fmaaImg} alt="FMAA pathway with Tillskill™" />
+            </div>
+          </div>
           <p>
             The FMAA pathway at Tillskill™ is designed for learners who want to build a strong base
             in accounting, cost management, decision-making and analytics before stepping into
@@ -467,10 +477,17 @@ function CscaProgramContent() {
     <>
       <section className="section">
         <div className="container">
-          <PageHeader
-            title="CSCA-focused learning with Tillskill™"
-            subtitle="Deepen your strategic analysis and competitive positioning skills."
-          />
+          <div className="program-hero">
+            <div className="program-hero-text">
+              <PageHeader
+                title="CSCA-focused learning with Tillskill™"
+                subtitle="Deepen your strategic analysis and competitive positioning skills."
+              />
+            </div>
+            <div className="program-hero-logo">
+              <img src={cscaImg} alt="CSCA strategy-focused learning with Tillskill™" />
+            </div>
+          </div>
           <p>
             Tillskill™ offers a specialised track for learners who want to strengthen their skills
             in strategy, competitive analysis and long-term value creation, complementing
@@ -533,10 +550,17 @@ function ExcelProgramContent() {
     <>
       <section className="section">
         <div className="container">
-          <PageHeader
-            title="Excel and Finance with Tillskill™"
-            subtitle="Hands-on spreadsheet skills for modern finance and analytics roles."
-          />
+          <div className="program-hero">
+            <div className="program-hero-text">
+              <PageHeader
+                title="Excel and Finance with Tillskill™"
+                subtitle="Hands-on spreadsheet skills for modern finance and analytics roles."
+              />
+            </div>
+            <div className="program-hero-logo">
+              <img src={excelFinanceImg} alt="Excel and Finance with Tillskill™" />
+            </div>
+          </div>
           <p>
             The Excel and Finance program at Tillskill™ is designed for learners who want to move
             beyond basic formulas into structured financial analysis, modelling and reporting that

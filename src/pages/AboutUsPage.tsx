@@ -1,14 +1,22 @@
 import { PageHeader } from '../components/Common/PageHeader'
+import logo from '../assets/logo.png'
 
 export function AboutUsPage() {
   return (
     <div className="page">
       <section className="section">
         <div className="container">
-          <PageHeader
-            title="Who We Are"
-            subtitle="Human-centred, globally experienced mentors preparing future boardroom leaders."
-          />
+          <div className="program-hero">
+            <div className="program-hero-text">
+              <PageHeader
+                title="Who We Are"
+                subtitle="Human-centred, globally experienced mentors preparing future boardroom leaders."
+              />
+            </div>
+            <div className="program-hero-logo">
+              <img src={logo} alt="Tillskill™ logo" />
+            </div>
+          </div>
           <h2>About Us</h2>
           <h3>The New Challenge</h3>
           <p>
