@@ -23,10 +23,10 @@ export function AboutUsPage() {
             leaves them with a certificate but without the deep, practical understanding required to
             lead in the boardroom.
           </p>
-          <h3>Enter TillSkill.com</h3>
+          <h3>Enter Tillskill™</h3>
           <p>
-            This is where TillSkill.com steps in to bridge the gap. We were founded on the belief
-            that while tools change, the need for human wisdom remains constant. At TillSkill.com, we
+            This is where Tillskill™ steps in to bridge the gap. We were founded on the belief
+            that while tools change, the need for human wisdom remains constant. At Tillskill™, we
             do not just teach you &quot;what&quot; the answer is; we explore &quot;why&quot; it is
             the answer and &quot;how&quot; you can apply it in a real-world international setup.
             Our approach is built on genuine human interaction: small class sizes, personalised
@@ -38,7 +38,7 @@ export function AboutUsPage() {
           <h3>It&apos;s a Continuing Journey</h3>
           <p>
             Our vision extends far beyond the CMA qualification. We are actively building a
-            comprehensive ecosystem for the modern financial leader. TillSkill.com will keep
+            comprehensive ecosystem for the modern financial leader. Tillskill™ will keep
             expanding its bouquet of offerings to include other prestigious designations, along with
             specialised leadership modules. Furthermore, we are developing professional networks
             designed to assist professionals in navigating complex career transitions and

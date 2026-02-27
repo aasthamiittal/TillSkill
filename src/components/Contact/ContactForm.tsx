@@ -17,7 +17,7 @@ export function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     const mailtoUrl = `mailto:support@tillskill.com?subject=${encodeURIComponent(
-      formState.subject || 'TillSkill enquiry',
+      formState.subject || 'Tillskill™ enquiry',
     )}&body=${encodeURIComponent(
       `Name: ${formState.name}\nEmail: ${formState.email}\n\n${formState.message}`,
     )}`

@@ -3,6 +3,7 @@ import { PageHeader } from '../components/Common/PageHeader'
 import { enrolCourses } from '../data/courses'
 import { CourseCard } from '../components/Enrol/CourseCard'
 import { useCart } from '../context/CartContext'
+import { useToast } from '../context/ToastContext'
 
 const filters = ['All', 'US CMA - Regular', 'US CMA - Fast Track', 'CSCA', 'FMAA', 'Excel and Finance'] as const
 type FilterType = (typeof filters)[number]
@@ -10,6 +11,7 @@ type FilterType = (typeof filters)[number]
 export function EnrolPage() {
   const [activeFilter, setActiveFilter] = useState<FilterType>('All')
   const { addToCart } = useCart()
+  const { showToast } = useToast()
 
   const filtered = enrolCourses.filter((course) => {
     if (activeFilter === 'All') return true
@@ -28,7 +30,7 @@ export function EnrolPage() {
       <section className="section">
         <div className="container">
           <PageHeader
-            title="Enrol with TillSkill"
+            title="Enrol with Tillskill™"
             subtitle="Choose the cohort or session that fits your goals and schedule."
           />
           <p>
@@ -67,13 +69,14 @@ export function EnrolPage() {
                 isSale: course.isSale,
                 originalPriceDisplay: course.originalPriceDisplay,
               }}
-              onAddToCart={() =>
+              onAddToCart={() => {
                 addToCart({
                   id: course.id,
                   title: course.title,
                   price: course.priceDisplay,
                 })
-              }
+                showToast('Item added successfully')
+              }}
             />
           ))}
         </div>

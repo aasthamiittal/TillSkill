@@ -3,13 +3,20 @@ import { Link } from 'react-router-dom'
 
 const STORAGE_KEY = 'tillskill-announcement-dismissed'
 
-export function AnnouncementBar() {
+type AnnouncementBarProps = {
+  onDismissed?: () => void
+}
+
+export function AnnouncementBar({ onDismissed }: AnnouncementBarProps) {
   const [dismissed, setDismissed] = useState(false)
 
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY)
-      if (stored === 'true') setDismissed(true)
+      if (stored === 'true') {
+        setDismissed(true)
+        onDismissed?.()
+      }
     } catch {
       // ignore
     }
@@ -17,6 +24,7 @@ export function AnnouncementBar() {
 
   const handleClose = () => {
     setDismissed(true)
+    onDismissed?.()
     try {
       localStorage.setItem(STORAGE_KEY, 'true')
     } catch {

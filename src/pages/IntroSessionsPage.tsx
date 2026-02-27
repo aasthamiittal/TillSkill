@@ -54,7 +54,7 @@ export function IntroSessionsPage() {
           <p>
             “The webinar provided me absolute clarity on what career path I should take and why. All
             my questions were answered. Looking forward to commencing the qualification with
-            TillSkill’s support.”
+            Tillskill™’s support.”
           </p>
           <footer>Former Attendee</footer>
         </blockquote>

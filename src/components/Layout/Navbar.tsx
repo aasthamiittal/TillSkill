@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import logo from '../../assets/logo.png'
+import { useCart } from '../../context/CartContext'
+import { useAuth } from '../../context/AuthContext'
 
 const whoWeAreItems = [
   { to: '/about-us', label: 'About Us' },
@@ -36,8 +39,19 @@ function isWhoWeAreActive(pathname: string) {
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [dropdown, setDropdown] = useState<'who' | 'programs' | 'contact' | null>(null)
+  const [scrolled, setScrolled] = useState(false)
   const navRef = useRef<HTMLElement>(null)
   const location = useLocation()
+  const { items } = useCart()
+  const { isLoggedIn, logout } = useAuth()
+  const cartCount = items.length
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     setOpen(false)
@@ -61,11 +75,11 @@ export function Navbar() {
   }
 
   return (
-    <header className="navbar">
+    <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-inner">
         <Link to="/" className="navbar-brand" onClick={closeAll}>
-          <img src={logo} alt="TillSkill logo" className="navbar-logo" />
-          <span className="navbar-title">TillSkill</span>
+          <img src={logo} alt="Tillskill™ logo" className="navbar-logo" />
+          <span className="navbar-title">Tillskill™</span>
         </Link>
 
         <button
@@ -150,11 +164,29 @@ export function Navbar() {
             </div>
           </div>
 
-          <NavLink to="/auth" className={({ isActive }) => `navbar-link navbar-cta ${isActive ? 'is-active' : ''}`} onClick={closeAll}>
-            Sign in
-          </NavLink>
+          {isLoggedIn ? (
+            <button
+              type="button"
+              className="navbar-link navbar-cta"
+              onClick={() => {
+                logout()
+                closeAll()
+              }}
+            >
+              Sign out
+            </button>
+          ) : (
+            <NavLink to="/auth" className={({ isActive }) => `navbar-link navbar-cta ${isActive ? 'is-active' : ''}`} onClick={closeAll}>
+              Sign in
+            </NavLink>
+          )}
           <NavLink to="/cart" className={({ isActive }) => `navbar-link navbar-cart ${isActive ? 'is-active' : ''}`} aria-label="Cart" onClick={closeAll}>
-            Cart
+            <ShoppingCartOutlinedIcon sx={{ fontSize: 26 }} className="navbar-cart-icon" />
+            {cartCount > 0 && (
+              <span className="navbar-cart-count" aria-label={`${cartCount} items in cart`}>
+                {cartCount}
+              </span>
+            )}
           </NavLink>
         </nav>
       </div>

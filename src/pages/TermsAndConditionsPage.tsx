@@ -9,12 +9,12 @@ export function TermsAndConditionsPage() {
         <div className="container terms-content">
           <PageHeader
             title="Terms and Conditions of Service"
-            subtitle="Last Updated: January 16, 2026 · Business Name: TillSkill™ · Jurisdiction: Victoria, Australia"
+            subtitle="Last Updated: January 16, 2026 · Business Name: Tillskill™ · Jurisdiction: Victoria, Australia"
           />
 
-          <h3>Welcome to TillSkill™</h3>
+          <h3>Welcome to Tillskill™</h3>
           <p>
-            These Terms and Conditions (&quot;Terms&quot;) govern your use of the TillSkill™
+            These Terms and Conditions (&quot;Terms&quot;) govern your use of the Tillskill™
             website, our learning management systems, and your enrolment in our educational
             programs. By accessing our website or enrolling in any of our courses, you agree to be
             bound by these Terms.
@@ -26,50 +26,50 @@ export function TermsAndConditionsPage() {
             <strong>IMPORTANT NOTICE REGARDING AUSTRALIAN ACCREDITATION (ASQA COMPLIANCE)</strong>
           </p>
           <p>
-            <strong>1.1 Non-RTO Status:</strong> TillSkill™ is a specialized provider of
-            professional examination preparation for global designations. TillSkill™ is not a
+            <strong>1.1 Non-RTO Status:</strong> Tillskill™ is a specialized provider of
+            professional examination preparation for global designations. Tillskill™ is not a
             Registered Training Organisation (RTO) within the Australian Vocational Education and
             Training (VET) sector.
           </p>
           <p>
             <strong>1.2 No AQF Qualification:</strong> The courses and training offered by
-            TillSkill™ are classified as &quot;Non-Nationally Recognised Training&quot; (Non-NRT).
+            Tillskill™ are classified as &quot;Non-Nationally Recognised Training&quot; (Non-NRT).
             They do not lead to the issuance of an Australian Qualification Framework (AQF)
             qualification (such as a Certificate IV, Diploma, or Advanced Diploma) or a Statement of
             Attainment.
           </p>
           <p>
-            <strong>1.3 Nature of Certification:</strong> TillSkill™ does not issue any
+            <strong>1.3 Nature of Certification:</strong> Tillskill™ does not issue any
             certification or diploma. However, upon successful completion of a preparatory course
-            or event, TillSkill™ students may receive a Certificate of Attendance. This certificate
+            or event, Tillskill™ students may receive a Certificate of Attendance. This certificate
             is strictly for professional development verification and validates your participation.
             It is not a formal qualification under the Australian law.
           </p>
           <p>
-            <strong>1.4 Third-Party Designations:</strong> TillSkill™ provides preparatory training
+            <strong>1.4 Third-Party Designations:</strong> Tillskill™ provides preparatory training
             for certifications issued by third-party international bodies. Mentions of designations
             such as US CMA (Certified Management Accountant), or others on our website are for
             illustrative purposes to describe the target qualification of our preparation courses.
             The actual professional designations are awarded solely by the respective external
             bodies (e.g., IMA) upon the student&apos;s successful completion of their specific
-            examination and experience requirements. TillSkill™ does not award these designations.
+            examination and experience requirements. Tillskill™ does not award these designations.
           </p>
           <p>
-            TillSkill™ is an IMA (USA) Silver Approved Learning Partner. TillSkill™ or the US CMA
-            qualification is in no way related to CMA Australia. TillSkill™ offers non-NRT which
+            Tillskill™ is an IMA (USA) Silver Approved Learning Partner. Tillskill™ or the US CMA
+            qualification is in no way related to CMA Australia. Tillskill™ offers non-NRT which
             will not lead to an Australian Qualification Framework (AQF) qualification or statement
             of attainment.
           </p>
           <p>
-            <strong>Availability:</strong> TillSkill™ may not currently offer coaching for all
+            <strong>Availability:</strong> Tillskill™ may not currently offer coaching for all
             designations mentioned as examples. Students must check the current Course Catalogue for
             active offerings.
           </p>
 
-          <h3>2. TillSkill™ Retake Assurance Policy</h3>
+          <h3>2. Tillskill™ Retake Assurance Policy</h3>
           <p>
             We are committed to your success. Instead of a standard &quot;Pass Guarantee,&quot; we
-            offer the TillSkill™ Retake Assurance. This policy allows diligent students who fail
+            offer the Tillskill™ Retake Assurance. This policy allows diligent students who fail
             their external exam to re-take our course at no additional tuition cost, subject to the
             following strict conditions:
           </p>
@@ -81,10 +81,10 @@ export function TermsAndConditionsPage() {
             <li>Attended at least 85% of the live classes for the relevant course batch.</li>
             <li>
               Completed 100% of the assigned course materials and mock exams provided by
-              TillSkill™.
+              Tillskill™.
             </li>
             <li>
-              Been assessed by TillSkill™ instructors as &quot;Fit to Sit&quot; for the
+              Been assessed by Tillskill™ instructors as &quot;Fit to Sit&quot; for the
               examination prior to the exam date.
             </li>
             <li>
@@ -95,7 +95,7 @@ export function TermsAndConditionsPage() {
           </ul>
           <p>
             <strong>2.2 The Benefit:</strong> Eligible students will be granted free access to one
-            (1) subsequent batch of the same course offered by TillSkill™. This is limited to access
+            (1) subsequent batch of the same course offered by Tillskill™. This is limited to access
             to live classes and digital materials available to that new batch.
           </p>
           <p>
@@ -111,9 +111,9 @@ export function TermsAndConditionsPage() {
               effort to study for and attempt the next examination.
             </li>
             <li>
-              <strong>Liability Cap:</strong> TillSkill™&apos;s maximum liability under this policy
+              <strong>Liability Cap:</strong> Tillskill™&apos;s maximum liability under this policy
               or any other claim is strictly limited to the amount paid by the student to
-              TillSkill™ for the course and excludes payment to the Approved Study Material
+              Tillskill™ for the course and excludes payment to the Approved Study Material
               provider, fee paid to IMA and other third party payments.
             </li>
             <li>
@@ -131,7 +131,7 @@ export function TermsAndConditionsPage() {
           </p>
           <p>
             <strong>3.2 Expiration:</strong> After 6 months, access will automatically terminate.
-            Extensions may be granted solely at the discretion of TillSkill™ management or under the
+            Extensions may be granted solely at the discretion of Tillskill™ management or under the
             terms of the Retake Assurance policy (Section 2).
           </p>
 
@@ -149,13 +149,13 @@ export function TermsAndConditionsPage() {
           <p>
             <strong>4.3 Bank Charges (Sender Pays):</strong> If paying via Bank Transfer or Wise, the
             student (Sender) bears all transaction fees and bank charges. You must instruct your bank
-            to use the &quot;OUR&quot; instruction code (Sender pays all fees). TillSkill™ must
+            to use the &quot;OUR&quot; instruction code (Sender pays all fees). Tillskill™ must
             receive the exact net amount listed on the invoice. If the amount received is short,
             access will be withheld until the balance is cleared.
           </p>
           <p>
             <strong>4.4 One-Time Payment:</strong> Payments are generally one-time fees for the
-            specific course duration. TillSkill™ does not engage in unauthorized auto-debiting. If
+            specific course duration. Tillskill™ does not engage in unauthorized auto-debiting. If
             you wish to split payments, you must manage this through your own banking arrangements.
           </p>
 
@@ -183,7 +183,7 @@ export function TermsAndConditionsPage() {
           <h3>6. Intellectual Property (IP) Rights</h3>
           <p>
             <strong>6.1 Ownership:</strong> All course materials, including slides, videos, PDFs,
-            mock exams, and proprietary methodologies, are the intellectual property of TillSkill™
+            mock exams, and proprietary methodologies, are the intellectual property of Tillskill™
             or its licensors (such as the IMA or the Training Material provider).
           </p>
           <p>
@@ -199,10 +199,10 @@ export function TermsAndConditionsPage() {
 
           <h3>7. Student Conduct</h3>
           <p>
-            TillSkill™ maintains a professional learning environment. We reserve the right to
+            Tillskill™ maintains a professional learning environment. We reserve the right to
             remove any student from the course without refund if they engage in harassment, hate
             speech, disruptive behaviour or illegal activities (such as copyright infringement,
-            etc.) towards TillSkill™, the Study Material provider, the respective Institute
+            etc.) towards Tillskill™, the Study Material provider, the respective Institute
             providing the qualification, the instructors or fellow students.
           </p>
 
