@@ -6,6 +6,18 @@
 const path = require('path');
 const fs = require('fs');
 
+// Static requires so the bundler includes Backend deps (dynamic require in Backend won't pull them)
+require('mongoose');
+require('express');
+require('bcryptjs');
+require('jsonwebtoken');
+require('cors');
+require('helmet');
+require('multer');
+require('morgan');
+require('stripe');
+require('serverless-http');
+
 // Backend path: Netlify puts included_files at the bundle root, so Backend may be next to this file
 // or at repo root relative to cwd/__dirname. Try multiple candidates.
 const backendCandidates = [
