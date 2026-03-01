@@ -1,19 +1,9 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const path = require('path');
-const multer = require('multer');
 const User = require('../models/user');
 
 const router = express.Router();
-
-const isNetlify = !!process.env.NETLIFY;
-const upload = isNetlify
-  ? multer({ storage: multer.memoryStorage(), limits: { fileSize: 5 * 1024 * 1024 } })
-  : multer({
-      dest: path.join(__dirname, '../uploads'),
-      limits: { fileSize: 5 * 1024 * 1024 },
-    });
 
 function signToken(user) {
   const payload = { sub: user.id, role: user.role, email: user.email };

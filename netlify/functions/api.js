@@ -13,7 +13,6 @@ require('bcryptjs');
 require('jsonwebtoken');
 require('cors');
 require('helmet');
-require('multer');
 require('morgan');
 require('stripe');
 require('serverless-http');
