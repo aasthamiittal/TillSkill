@@ -140,20 +140,22 @@ export function RegistrationPage() {
     }
     setSubmitting(true)
     try {
-      const res = await authApi.registerStudent({
-        firstName: form.firstName.trim(),
-        lastName: form.lastName.trim(),
-        email: form.email.trim(),
-        phone: form.phone.trim(),
-        password: form.password,
-        timezone: form.timezone.trim(),
-        streamOfEducation: form.streamOfEducation,
-        qualification: form.qualification,
-        courseInterest: form.courseInterest,
-        infoSessionId: form.infoSessionId.trim(),
-        englishComfortable: form.englishComfortable,
-        ...(form.contactAddress ? { contactAddress: form.contactAddress.trim() } : {}),
-      })
+      const fd = new FormData()
+      fd.append('firstName', form.firstName.trim())
+      fd.append('lastName', form.lastName.trim())
+      fd.append('email', form.email.trim())
+      fd.append('phone', form.phone.trim())
+      fd.append('password', form.password)
+      fd.append('timezone', form.timezone.trim())
+      fd.append('streamOfEducation', form.streamOfEducation)
+      fd.append('qualification', form.qualification)
+      fd.append('courseInterest', form.courseInterest)
+      fd.append('infoSessionId', form.infoSessionId.trim())
+      fd.append('englishComfortable', form.englishComfortable)
+      if (form.contactAddress) fd.append('contactAddress', form.contactAddress.trim())
+      if (resumeFile) fd.append('resume', resumeFile)
+
+      const res = await authApi.registerFormData(fd)
       login({ token: res.token, user: res.user })
 
       if (short) {

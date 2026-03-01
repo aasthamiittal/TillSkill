@@ -1,9 +1,16 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const path = require('path');
+const multer = require('multer');
 const User = require('../models/user');
 
 const router = express.Router();
+
+const upload = multer({
+  dest: path.join(__dirname, '../uploads'),
+  limits: { fileSize: 5 * 1024 * 1024 },
+});
 
 function signToken(user) {
   const payload = { sub: user.id, role: user.role, email: user.email };
@@ -12,8 +19,8 @@ function signToken(user) {
   return jwt.sign(payload, secret, { expiresIn });
 }
 
-// Student registration (JSON body; resume not supported on serverless)
-router.post('/register', async (req, res, next) => {
+// Student registration (FormData: text fields + optional resume file)
+router.post('/register', upload.single('resume'), async (req, res, next) => {
   try {
     const body = req.body || {};
     const email = (body.email || '').trim().toLowerCase();
@@ -39,6 +46,8 @@ router.post('/register', async (req, res, next) => {
       return res.status(409).json({ message: 'User already exists' });
     }
 
+    const resumePath = req.file ? req.file.path : undefined;
+
     const user = await User.create({
       email,
       password,
@@ -53,6 +62,7 @@ router.post('/register', async (req, res, next) => {
       courseInterest: courseInterest || undefined,
       infoSessionId: infoSessionId || undefined,
       englishComfortable: englishComfortable || undefined,
+      resumePath: resumePath || undefined,
       role: 'student',
     });
 

@@ -7,8 +7,7 @@ const { isConfigured: isStripeConfigured, createCheckoutSessionForEnrollment } =
 
 const router = express.Router();
 
-const frontendOrigin = () =>
-  process.env.FRONTEND_ORIGIN || process.env.URL || 'http://localhost:5173';
+const frontendOrigin = () => process.env.FRONTEND_ORIGIN || 'http://localhost:5173';
 
 // Short-term: create enrollment and Stripe Checkout URL when Stripe is configured
 router.post('/short/:slug', auth('student'), async (req, res, next) => {
