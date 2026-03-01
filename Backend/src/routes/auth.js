@@ -7,10 +7,13 @@ const User = require('../models/user');
 
 const router = express.Router();
 
-const upload = multer({
-  dest: path.join(__dirname, '../uploads'),
-  limits: { fileSize: 5 * 1024 * 1024 },
-});
+const isNetlify = !!process.env.NETLIFY;
+const upload = isNetlify
+  ? multer({ storage: multer.memoryStorage(), limits: { fileSize: 5 * 1024 * 1024 } })
+  : multer({
+      dest: path.join(__dirname, '../uploads'),
+      limits: { fileSize: 5 * 1024 * 1024 },
+    });
 
 function signToken(user) {
   const payload = { sub: user.id, role: user.role, email: user.email };
@@ -46,7 +49,11 @@ router.post('/register', upload.single('resume'), async (req, res, next) => {
       return res.status(409).json({ message: 'User already exists' });
     }
 
-    const resumePath = req.file ? req.file.path : undefined;
+    const resumePath = req.file
+      ? isNetlify
+        ? undefined
+        : req.file.path
+      : undefined;
 
     const user = await User.create({
       email,
