@@ -5,8 +5,12 @@
 
 const path = require('path');
 
+// Backend path: from repo root (Netlify includes Backend via included_files; cwd is often repo root)
 const backendPath = path.resolve(__dirname, '../../Backend');
-require('dotenv').config({ path: path.join(backendPath, '../.env') });
+const backendPathFromCwd = path.join(process.cwd(), 'Backend');
+const fs = require('fs');
+const resolvedBackendPath = fs.existsSync(backendPath) ? backendPath : backendPathFromCwd;
+require('dotenv').config({ path: path.join(resolvedBackendPath, '../.env') });
 
 let app = null;
 let connectDb = null;
@@ -16,9 +20,9 @@ let dbReady = null;
 function loadApp() {
   if (app) return;
   serverless = require('serverless-http');
-  const db = require(path.join(backendPath, 'src/lib/db'));
+  const db = require(path.join(resolvedBackendPath, 'src/lib/db'));
   connectDb = db.connectDb;
-  app = require(path.join(backendPath, 'src/app'));
+  app = require(path.join(resolvedBackendPath, 'src/app'));
 }
 
 async function ensureDb() {

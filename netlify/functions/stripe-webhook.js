@@ -4,13 +4,15 @@
  */
 
 const path = require('path');
+const fs = require('fs');
 
 const backendPath = path.resolve(__dirname, '../../Backend');
-require('dotenv').config({ path: path.join(backendPath, '../.env') });
+const resolvedBackendPath = fs.existsSync(backendPath) ? backendPath : path.join(process.cwd(), 'Backend');
+require('dotenv').config({ path: path.join(resolvedBackendPath, '../.env') });
 
-const Enrollment = require(path.join(backendPath, 'src/models/enrollment'));
-const { connectDb } = require(path.join(backendPath, 'src/lib/db'));
-const { constructWebhookEvent } = require(path.join(backendPath, 'src/lib/stripe'));
+const Enrollment = require(path.join(resolvedBackendPath, 'src/models/enrollment'));
+const { connectDb } = require(path.join(resolvedBackendPath, 'src/lib/db'));
+const { constructWebhookEvent } = require(path.join(resolvedBackendPath, 'src/lib/stripe'));
 
 let dbReady = null;
 

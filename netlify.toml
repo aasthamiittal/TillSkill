@@ -3,6 +3,9 @@
   publish = "dist"
   functions = "netlify/functions"
 
+[functions]
+  included_files = ["./Backend/**"]
+
 # API routes (order matters: more specific first)
 [[redirects]]
   from = "/api/webhooks/stripe"
