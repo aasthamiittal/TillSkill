@@ -577,10 +577,7 @@ function ExcelProgramContent() {
             </li>
           </ul>
           <div className="cta-row">
-            <CTAButton to="/intro-sessions">See a live Excel class</CTAButton>
-            <CTAButton to="/contact" variant="outline">
-              Understand if this fits your profile
-            </CTAButton>
+            <p className="program-coming-soon">Sessions Launching Soon</p>
           </div>
         </div>
       </section>

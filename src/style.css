@@ -610,6 +610,14 @@ a:hover {
   margin-top: 1rem;
 }
 
+.program-coming-soon {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--ts-accent);
+  letter-spacing: 0.02em;
+}
+
 /* Announcement bar – below navbar, horizontal moving belt */
 .announcement-bar {
   position: sticky;
