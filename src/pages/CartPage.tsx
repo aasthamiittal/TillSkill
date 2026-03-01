@@ -1,9 +1,30 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { PageHeader } from '../components/Common/PageHeader'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
+import { useToast } from '../context/ToastContext'
 import { CTAButton } from '../components/Common/CTAButton'
 
 export function CartPage() {
   const { items, removeFromCart, clearCart } = useCart()
+  const { isLoggedIn } = useAuth()
+  const { showToast } = useToast()
+  const navigate = useNavigate()
+
+  const handleProceedToCheckout = () => {
+    if (!isLoggedIn) {
+      navigate('/auth?returnUrl=/checkout')
+      return
+    }
+
+    if (items.length === 0) {
+      showToast('Your cart is empty.')
+      return
+    }
+
+    navigate('/checkout')
+  }
 
   return (
     <div className="page">
@@ -35,7 +56,9 @@ export function CartPage() {
               <CTAButton variant="outline" onClick={clearCart}>
                 Clear cart
               </CTAButton>
-              <CTAButton variant="primary">Proceed to checkout (coming soon)</CTAButton>
+              <CTAButton variant="primary" onClick={handleProceedToCheckout}>
+                Proceed to checkout
+              </CTAButton>
             </div>
           </>
         )}

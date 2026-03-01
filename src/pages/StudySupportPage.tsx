@@ -17,12 +17,12 @@ export function StudySupportPage() {
         <div>
           <PageHeader
             title="Study and Support"
-            subtitle="TillSkill students can book one-on-one doubt-clearing appointments with mentors."
+            subtitle="TillSkill™ students can book one-on-one doubt-clearing appointments with mentors."
           />
           <h2>Need Help? Schedule Your Appointment.</h2>
           <p>
             Confused or facing challenges in your studies? Use this form to request a personal
-            meeting with your mentor. This session is for TillSkill students (Regular/Fast Track)
+            meeting with your mentor. This session is for TillSkill™ students (Regular/Fast Track)
             and is focused on clarifying doubts, not personal coaching.
           </p>
           <ul>

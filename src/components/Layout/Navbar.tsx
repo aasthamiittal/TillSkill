@@ -1,6 +1,9 @@
-import { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import logo from '../../assets/logo.png'
+// import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+// import { useCart } from '../../context/CartContext'
+import { useAuth } from '../../context/AuthContext'
+const logo = new URL('../../assets/logo.png', import.meta.url).href
 
 const whoWeAreItems = [
   { to: '/about-us', label: 'About Us' },
@@ -18,7 +21,8 @@ const programsItems = [
 const contactItems = [
   { to: '/intro-sessions', label: 'Intro Sessions' },
   { to: '/study-support', label: 'Study Support' },
-  { to: '/contact', label: 'Contact US' },
+  { to: '/contact', label: 'Contact Us' },
+  { to: '/for-corporates', label: 'For Corporates' },
 ]
 
 function isProgramsActive(pathname: string) {
@@ -26,7 +30,7 @@ function isProgramsActive(pathname: string) {
 }
 
 function isContactActive(pathname: string) {
-  return ['/intro-sessions', '/study-support', '/contact'].includes(pathname)
+  return ['/intro-sessions', '/study-support', '/contact', '/for-corporates'].includes(pathname)
 }
 
 function isWhoWeAreActive(pathname: string) {
@@ -36,8 +40,19 @@ function isWhoWeAreActive(pathname: string) {
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [dropdown, setDropdown] = useState<'who' | 'programs' | 'contact' | null>(null)
+  const [scrolled, setScrolled] = useState(false)
   const navRef = useRef<HTMLElement>(null)
   const location = useLocation()
+  // const { items } = useCart()  // Cart commented out
+  const { isLoggedIn, logout } = useAuth()
+  // const cartCount = items.length  // Cart commented out
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     setOpen(false)
@@ -61,11 +76,11 @@ export function Navbar() {
   }
 
   return (
-    <header className="navbar">
+    <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-inner">
         <Link to="/" className="navbar-brand" onClick={closeAll}>
-          <img src={logo} alt="TillSkill logo" className="navbar-logo" />
-          <span className="navbar-title">TillSkill</span>
+          <img src={logo} alt="TillSkill™ logo" className="navbar-logo" />
+          <span className="navbar-title">TillSkill™</span>
         </Link>
 
         <button
@@ -125,8 +140,14 @@ export function Navbar() {
             </div>
           </div>
 
+          {isLoggedIn && (
+            <NavLink to="/my-courses" className={({ isActive }) => `navbar-link ${isActive ? 'is-active' : ''}`} onClick={closeAll}>
+              My Enrolled Courses
+            </NavLink>
+          )}
+
           <NavLink to="/enrol" className={({ isActive }) => `navbar-link ${isActive ? 'is-active' : ''}`} onClick={closeAll}>
-            Enrol
+            Intro Sessions
           </NavLink>
 
           {/* Contact dropdown */}
@@ -150,12 +171,32 @@ export function Navbar() {
             </div>
           </div>
 
-          <NavLink to="/auth" className={({ isActive }) => `navbar-link navbar-cta ${isActive ? 'is-active' : ''}`} onClick={closeAll}>
-            Sign in
-          </NavLink>
+          {isLoggedIn ? (
+            <button
+              type="button"
+              className="navbar-link navbar-cta"
+              onClick={() => {
+                logout()
+                closeAll()
+              }}
+            >
+              Sign out
+            </button>
+          ) : (
+            <NavLink to="/auth" className={({ isActive }) => `navbar-link navbar-cta ${isActive ? 'is-active' : ''}`} onClick={closeAll}>
+              Sign in
+            </NavLink>
+          )}
+          {/* Cart commented out – registration flow used instead
           <NavLink to="/cart" className={({ isActive }) => `navbar-link navbar-cart ${isActive ? 'is-active' : ''}`} aria-label="Cart" onClick={closeAll}>
-            Cart
+            <ShoppingCartOutlinedIcon sx={{ fontSize: 26 }} className="navbar-cart-icon" />
+            {cartCount > 0 && (
+              <span className="navbar-cart-count" aria-label={`${cartCount} items in cart`}>
+                {cartCount}
+              </span>
+            )}
           </NavLink>
+          */}
         </nav>
       </div>
     </header>

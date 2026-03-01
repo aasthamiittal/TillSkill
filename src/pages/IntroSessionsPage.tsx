@@ -1,3 +1,4 @@
+import React from 'react'
 import { PageHeader } from '../components/Common/PageHeader'
 import { introSessions } from '../data/courses'
 import { CTAButton } from '../components/Common/CTAButton'
@@ -54,7 +55,7 @@ export function IntroSessionsPage() {
           <p>
             “The webinar provided me absolute clarity on what career path I should take and why. All
             my questions were answered. Looking forward to commencing the qualification with
-            TillSkill’s support.”
+            TillSkill™’s support.”
           </p>
           <footer>Former Attendee</footer>
         </blockquote>

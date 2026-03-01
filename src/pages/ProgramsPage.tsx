@@ -1,13 +1,7 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { PageHeader } from '../components/Common/PageHeader'
-
-const programSlugs = [
-  { slug: 'us-cma', label: 'US CMA' },
-  { slug: 'fmaa', label: 'FMAA' },
-  { slug: 'csca', label: 'CSCA' },
-  { slug: 'excel', label: 'Excel and Finance' },
-  { slug: 'others', label: 'Others' },
-] as const
+import { programSlugs } from '../data/programContent'
 
 export function ProgramsPage() {
   return (
@@ -20,7 +14,7 @@ export function ProgramsPage() {
           />
           <p className="programs-intro">
             Choose a program to view details. All our programs share the same rigorous approach and
-            TillSkill advantage.
+            TillSkill™ advantage.
           </p>
           <ul className="programs-list">
             {programSlugs.map(({ slug, label }) => (

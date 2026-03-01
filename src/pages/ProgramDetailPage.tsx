@@ -1,13 +1,21 @@
-import { ProgramContent } from '../data/programContent'
+import React from 'react'
+import { Navigate, useParams } from 'react-router-dom'
+import { ProgramContent, programSlugs } from '../data/programContent'
+import type { ProgramSlug } from '../data/programContent'
 
-/**
- * Individual program page. All programs (US CMA, FMAA, CSCA, Excel and Finance, Others)
- * show the same content from ProgramContent.
- */
 export function ProgramDetailPage() {
+  const params = useParams<{ slug: ProgramSlug }>()
+  const slug = params.slug as ProgramSlug | undefined
+
+  const validSlugs = programSlugs.map((p) => p.slug)
+
+  if (!slug || !validSlugs.includes(slug)) {
+    return <Navigate to="/programs" replace />
+  }
+
   return (
     <div className="page">
-      <ProgramContent />
+      <ProgramContent slug={slug} />
     </div>
   )
 }
