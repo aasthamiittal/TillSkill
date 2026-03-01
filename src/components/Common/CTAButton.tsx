@@ -7,9 +7,10 @@ type CTAButtonProps = {
   children: React.ReactNode
   variant?: 'primary' | 'secondary' | 'outline'
   type?: 'button' | 'submit'
+  disabled?: boolean
 }
 
-export function CTAButton({ to, onClick, children, variant = 'primary', type = 'button' }: CTAButtonProps) {
+export function CTAButton({ to, onClick, children, variant = 'primary', type = 'button', disabled }: CTAButtonProps) {
   const className = `btn btn-${variant}`
 
   if (to) {
@@ -21,7 +22,7 @@ export function CTAButton({ to, onClick, children, variant = 'primary', type = '
   }
 
   return (
-    <button type={type} className={className} onClick={onClick}>
+    <button type={type} className={className} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   )

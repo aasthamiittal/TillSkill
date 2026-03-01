@@ -1,3 +1,4 @@
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { PageHeader } from '../components/Common/PageHeader'
 import { useCart } from '../context/CartContext'
@@ -13,10 +14,16 @@ export function CartPage() {
 
   const handleProceedToCheckout = () => {
     if (!isLoggedIn) {
-      navigate('/auth?returnUrl=/cart')
+      navigate('/auth?returnUrl=/checkout')
       return
     }
-    showToast('Checkout coming soon.')
+
+    if (items.length === 0) {
+      showToast('Your cart is empty.')
+      return
+    }
+
+    navigate('/checkout')
   }
 
   return (

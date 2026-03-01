@@ -32,8 +32,8 @@ export function Layout({ children }: LayoutProps) {
 
   return (
     <div className={`app-root${announcementDismissed ? ' announcement-dismissed' : ''}`}>
-      <AnnouncementBar onDismissed={() => setAnnouncementDismissed(true)} />
       <Navbar />
+      <AnnouncementBar onDismissed={() => setAnnouncementDismissed(true)} />
       <main className="app-main">{children}</main>
       <Footer />
     </div>

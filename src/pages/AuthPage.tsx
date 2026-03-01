@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { PageHeader } from '../components/Common/PageHeader'
 import { CTAButton } from '../components/Common/CTAButton'
 import { useAuth } from '../context/AuthContext'
+import { authApi } from '../lib/api'
+import { useToast } from '../context/ToastContext'
 
 type Mode = 'signin' | 'signup' | 'forgot'
 
@@ -12,22 +14,42 @@ export function AuthPage() {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const { login } = useAuth()
+  const { showToast } = useToast()
+  const [submitting, setSubmitting] = useState(false)
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const returnUrl = searchParams.get('returnUrl') ?? '/'
 
-  const handleSignIn = (e: React.FormEvent) => {
+  const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email.trim()) return
-    login(email.trim())
-    navigate(returnUrl, { replace: true })
+    if (!email.trim() || !password) return
+    setSubmitting(true)
+    try {
+      const res = await authApi.login({ email: email.trim(), password })
+      login({ token: res.token, user: res.user })
+      navigate(returnUrl, { replace: true })
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Unable to sign in'
+      showToast(message)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
-  const handleSignUp = (e: React.FormEvent) => {
+  const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email.trim()) return
-    login(email.trim())
-    navigate(returnUrl, { replace: true })
+    if (!email.trim() || !password || password !== confirmPassword) return
+    setSubmitting(true)
+    try {
+      const res = await authApi.register({ email: email.trim(), password })
+      login({ token: res.token, user: res.user })
+      navigate(returnUrl, { replace: true })
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Unable to create account'
+      showToast(message)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const handleForgot = (e: React.FormEvent) => {
@@ -41,7 +63,7 @@ export function AuthPage() {
       <section className="section">
         <div className="container">
           <PageHeader
-            title="Welcome to Tillskill™"
+            title="Welcome to TillSkill™"
             subtitle="Access your learning dashboard, live classes, and resources."
           />
       <div className="auth-panel">
@@ -80,7 +102,9 @@ export function AuthPage() {
               <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
             </label>
             <div className="form-actions">
-              <CTAButton type="submit" variant="primary">Sign in</CTAButton>
+              <CTAButton type="submit" variant="primary" disabled={submitting}>
+                {submitting ? 'Signing in…' : 'Sign in'}
+              </CTAButton>
             </div>
           </form>
         )}
@@ -100,7 +124,9 @@ export function AuthPage() {
               <input type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
             </label>
             <div className="form-actions">
-              <CTAButton type="submit" variant="primary">Create account</CTAButton>
+              <CTAButton type="submit" variant="primary" disabled={submitting}>
+                {submitting ? 'Creating account…' : 'Create account'}
+              </CTAButton>
             </div>
           </form>
         )}

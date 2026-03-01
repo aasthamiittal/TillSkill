@@ -1,3 +1,4 @@
+import React from 'react'
 import { PageHeader } from '../components/Common/PageHeader'
 import { ContactForm } from '../components/Contact/ContactForm'
 import { CTAButton } from '../components/Common/CTAButton'
@@ -8,7 +9,7 @@ export function ContactPage() {
       <section className="section">
         <div className="container">
           <PageHeader
-            title="Contact Tillskill™"
+            title="Contact TillSkill™"
             subtitle="Have questions about the US CMA or our other programs? We are here to help."
           />
           <div className="two-column">

@@ -1,5 +1,7 @@
 export type ProgramCategory = 'US CMA' | 'FMAA' | 'CSCA' | 'Excel & Finance'
 
+export type SubscriptionType = 'short' | 'long'
+
 export type CourseItem = {
   id: string
   title: string
@@ -8,6 +10,9 @@ export type CourseItem = {
   priceDisplay: string
   isSale?: boolean
   originalPriceDisplay?: string
+  // Optional backend mapping for enrolments
+  backendSlug?: 'us-cma' | 'fmaa' | 'csca' | 'excel' | 'intro'
+  subscriptionType?: SubscriptionType
 }
 
 export const introSessions: CourseItem[] = [
@@ -17,6 +22,8 @@ export const introSessions: CourseItem[] = [
     category: 'US CMA',
     description: 'FREE live webinar on the US CMA certification.',
     priceDisplay: 'USD 0.00',
+    backendSlug: 'intro',
+    subscriptionType: 'short',
   },
   {
     id: 'intro-7mar-6am',
@@ -24,6 +31,8 @@ export const introSessions: CourseItem[] = [
     category: 'US CMA',
     description: 'FREE live webinar on the US CMA certification.',
     priceDisplay: 'USD 0.00',
+    backendSlug: 'intro',
+    subscriptionType: 'short',
   },
   {
     id: 'intro-7mar-6pm',
@@ -31,6 +40,8 @@ export const introSessions: CourseItem[] = [
     category: 'US CMA',
     description: 'FREE live webinar on the US CMA certification.',
     priceDisplay: 'USD 0.00',
+    backendSlug: 'intro',
+    subscriptionType: 'short',
   },
 ]
 
@@ -43,6 +54,8 @@ export const enrolCourses: CourseItem[] = [
     description:
       'Simplified Finance in 6 focused sessions — finance made simple, decisions made smarter.',
     priceDisplay: 'USD 399.00',
+    backendSlug: 'fmaa',
+    subscriptionType: 'long',
   },
   {
     id: 'fmaa-regular',
@@ -51,6 +64,8 @@ export const enrolCourses: CourseItem[] = [
     description:
       'A 15-session journey into simplified finance with case studies, stories, and practical tools.',
     priceDisplay: 'USD 399.00',
+    backendSlug: 'fmaa',
+    subscriptionType: 'long',
   },
   {
     id: 'leases-ifrs16',
@@ -59,6 +74,8 @@ export const enrolCourses: CourseItem[] = [
     description:
       'Focused 3-hour session explaining IFRS 16 and demonstrating Excel-based lease calculations.',
     priceDisplay: 'USD 99.00',
+    backendSlug: 'excel',
+    subscriptionType: 'short',
   },
   {
     id: 'excel-in-finance',
@@ -67,6 +84,8 @@ export const enrolCourses: CourseItem[] = [
     description:
       'Practical Excel in Finance skills to help you make a meaningful impact in your organisation.',
     priceDisplay: 'USD 99.00',
+    backendSlug: 'excel',
+    subscriptionType: 'short',
   },
   {
     id: 'us-cma-fasttrack-both-jan',
@@ -77,6 +96,8 @@ export const enrolCourses: CourseItem[] = [
     priceDisplay: 'Sale: USD 1,199.00',
     isSale: true,
     originalPriceDisplay: 'USD 1,499.00',
+    backendSlug: 'us-cma',
+    subscriptionType: 'long',
   },
   {
     id: 'us-cma-fasttrack-part2-jan',
@@ -87,6 +108,8 @@ export const enrolCourses: CourseItem[] = [
     priceDisplay: 'Sale: USD 639.00',
     isSale: true,
     originalPriceDisplay: 'USD 799.00',
+    backendSlug: 'us-cma',
+    subscriptionType: 'long',
   },
   {
     id: 'us-cma-fasttrack-part1-jan',
@@ -97,6 +120,8 @@ export const enrolCourses: CourseItem[] = [
     priceDisplay: 'Sale: USD 639.00',
     isSale: true,
     originalPriceDisplay: 'USD 799.00',
+    backendSlug: 'us-cma',
+    subscriptionType: 'long',
   },
   {
     id: 'us-cma-regular-both-mar',
@@ -107,6 +132,8 @@ export const enrolCourses: CourseItem[] = [
     priceDisplay: 'Sale: USD 1,199.00',
     isSale: true,
     originalPriceDisplay: 'USD 1,499.00',
+    backendSlug: 'us-cma',
+    subscriptionType: 'long',
   },
   {
     id: 'us-cma-regular-part2-mar',
@@ -117,6 +144,8 @@ export const enrolCourses: CourseItem[] = [
     priceDisplay: 'Sale: USD 639.00',
     isSale: true,
     originalPriceDisplay: 'USD 799.00',
+    backendSlug: 'us-cma',
+    subscriptionType: 'long',
   },
   {
     id: 'us-cma-regular-part1-mar',
@@ -127,6 +156,8 @@ export const enrolCourses: CourseItem[] = [
     priceDisplay: 'Sale: USD 639.00',
     isSale: true,
     originalPriceDisplay: 'USD 799.00',
+    backendSlug: 'us-cma',
+    subscriptionType: 'long',
   },
 ]
 

@@ -1,11 +1,13 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { CTAButton } from '../components/Common/CTAButton'
 import { PageHeader } from '../components/Common/PageHeader'
 import { FAQAccordion, type FAQItem } from '../components/Common/FAQAccordion'
-import cmaImg from '../assets/cma-img.png'
-import fmaaImg from '../assets/fmaa-img.png'
-import cscaImg from '../assets/csca-img.png'
-import excelFinanceImg from '../assets/excel-finance-img.png'
+
+const cmaImg = new URL('../assets/CMA-logo.png', import.meta.url).href
+const fmaaImg = new URL('../assets/FMAA-logo.png', import.meta.url).href
+const cscaImg = new URL('../assets/CSCA-logo.png', import.meta.url).href
+// const excelFinanceImg = new URL('../assets/excel-finance-img.png', import.meta.url).href
 
 export const programSlugs = [
   { slug: 'us-cma', label: 'US CMA' },
@@ -37,7 +39,7 @@ function UsCmaProgramContent() {
         <p>
           The US CMA suits finance and accounting students, early-career professionals in
           reporting or FP&amp;A, and anyone aiming for management accounting or business
-          partnering roles. You can start with Tillskill™ after Grade 12 while completing your
+          partnering roles. You can start with TillSkill™ after Grade 12 while completing your
           degree.
         </p>
       ),
@@ -46,7 +48,7 @@ function UsCmaProgramContent() {
       question: 'How long does prep take?',
       answer: (
         <p>
-          Many learners complete prep in 6–8 months. Tillskill™ offers structured batches and
+          Many learners complete prep in 6–8 months. TillSkill™ offers structured batches and
           flexible access to recorded sessions so you can balance work or studies.
         </p>
       ),
@@ -56,7 +58,7 @@ function UsCmaProgramContent() {
       answer: (
         <p>
           Two parts: Part 1 – Financial Planning, Performance and Analytics; Part 2 – Strategic
-          Financial Management. Tillskill™ prepares you with curriculum aligned to the latest IMA
+          Financial Management. TillSkill™ prepares you with curriculum aligned to the latest IMA
           exam specifications.
         </p>
       ),
@@ -80,7 +82,7 @@ function UsCmaProgramContent() {
           <div className="program-hero">
             <div className="program-hero-text">
               <h1 className="program-hero-title">
-                US CMA with Tillskill™
+                US CMA with TillSkill™
                 <br />
                 Certified Management Accountant
               </h1>
@@ -101,7 +103,7 @@ function UsCmaProgramContent() {
           <div className="cta-row">
             <CTAButton to="/intro-sessions">Join a free US CMA intro session</CTAButton>
             <CTAButton to="/contact" variant="outline">
-              Connect with a Tillskill™ mentor
+              Connect with a TillSkill™ mentor
             </CTAButton>
           </div>
         </div>
@@ -131,18 +133,18 @@ function UsCmaProgramContent() {
         </div>
       </section>
 
-      {/* 3. Why choose Tillskill™ for US CMA */}
+      {/* 3. Why choose TillSkill™ for US CMA */}
       <section className="section section-alt">
         <div className="container">
           <PageHeader
-            title="Why choose Tillskill™ for US CMA?"
+            title="Why choose TillSkill™ for US CMA?"
             subtitle="A human-first, exam-focused learning experience inspired by leading global CMA providers."
           />
           <div className="three-column-cards">
             <article className="info-card">
               <h3>Structured 2-part prep</h3>
               <p>
-                Tillskill™ breaks the US CMA syllabus into a clear roadmap across Part 1 and Part 2,
+                TillSkill™ breaks the US CMA syllabus into a clear roadmap across Part 1 and Part 2,
                 with live classes, guided self-study, and mock exams aligned to the latest testing
                 patterns.
               </p>
@@ -159,7 +161,7 @@ function UsCmaProgramContent() {
               <h3>Career-focused outcomes</h3>
               <p>
                 From planning your exam windows to preparing for interviews and on-the-job
-                scenarios, Tillskill™ supports you in building a profile for FP&amp;A, controllership
+                scenarios, TillSkill™ supports you in building a profile for FP&amp;A, controllership
                 and broader management roles.
               </p>
             </article>
@@ -187,7 +189,7 @@ function UsCmaProgramContent() {
               <h3>Requirements to earn your US CMA (IMA)</h3>
               <ul>
                 <li>Bachelor&apos;s degree from an accredited institution (or in progress)</li>
-                <li>Start early: begin with Tillskill™ after Grade 12 while completing your degree</li>
+                <li>Start early: begin with TillSkill™ after Grade 12 while completing your degree</li>
                 <li>Pass both Part 1 and Part 2 of the CMA exam</li>
                 <li>Two years of relevant experience (before or within 7 years of passing)</li>
                 <li>Active IMA membership</li>
@@ -235,7 +237,7 @@ function UsCmaProgramContent() {
       <section className="section">
         <div className="container">
           <PageHeader
-            title="How you learn with Tillskill™"
+            title="How you learn with TillSkill™"
             subtitle="Structured, mentor-led preparation so you stay exam-ready."
           />
           <div className="three-column-cards">
@@ -249,7 +251,7 @@ function UsCmaProgramContent() {
             <article className="info-card">
               <h3>1:1 doubt clearing</h3>
               <p>
-                Personalised guidance from Tillskill™ mentors so you understand the &quot;why&quot;
+                Personalised guidance from TillSkill™ mentors so you understand the &quot;why&quot;
                 and &quot;how&quot;.
               </p>
             </article>
@@ -274,7 +276,7 @@ function UsCmaProgramContent() {
           <div className="two-column">
             <p>
               The US CMA opens doors to management accountant, FP&amp;A analyst, finance manager,
-              and business partner roles in MNCs, consulting firms, and shared services. Tillskill™
+              and business partner roles in MNCs, consulting firms, and shared services. TillSkill™
               prepares you for the exam and for the interview and workplace scenarios that follow.
             </p>
             <p>
@@ -293,7 +295,7 @@ function UsCmaProgramContent() {
             subtitle="Curriculum and instruction aligned with what global examiners test today."
           />
           <p>
-            Tillskill™ as an IMA Silver Approved Learning Partner uses an approved publisher of
+            TillSkill™ as an IMA Silver Approved Learning Partner uses an approved publisher of
             learning and testing material. This accreditation is your guarantee that our curriculum
             meets the highest global standards and is designed to help you pass on your first
             attempt.
@@ -301,18 +303,18 @@ function UsCmaProgramContent() {
         </div>
       </section>
 
-      {/* 9. The Tillskill™ Advantage */}
+      {/* 9. The TillSkill™ Advantage */}
       <section className="section section-alt">
         <div className="container">
           <PageHeader
-            title="The Tillskill™ Advantage"
+            title="The TillSkill™ Advantage"
             subtitle="Stay ahead of automation with skills that keep you relevant in every business cycle."
           />
           <div className="three-column-cards">
             <article className="info-card">
               <h3>Jobs on their way out</h3>
               <p>
-                Every industrial revolution retires certain roles and creates new ones. Tillskill™
+                Every industrial revolution retires certain roles and creates new ones. TillSkill™
                 helps you move beyond repetitive reporting into analysis, planning, and decision
                 support.
               </p>
@@ -327,7 +329,7 @@ function UsCmaProgramContent() {
             <article className="info-card">
               <h3>First-mover advantage</h3>
               <p>
-                Whether you are starting out or already working, using Tillskill™ to earn your US
+                Whether you are starting out or already working, using TillSkill™ to earn your US
                 CMA helps you position yourself early for leadership roles in a rapidly changing
                 finance landscape.
               </p>
@@ -340,7 +342,7 @@ function UsCmaProgramContent() {
       <section className="section">
         <div className="container">
           <PageHeader
-            title="How to enrol with Tillskill™"
+            title="How to enrol with TillSkill™"
             subtitle="Talk to a mentor, join a free intro session, or enrol in the next batch."
           />
           <div className="cta-row" style={{ justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -359,14 +361,14 @@ function UsCmaProgramContent() {
       <section className="section section-alt">
         <div className="container">
           <PageHeader
-            title="What learners say about Tillskill™"
+            title="What learners say about TillSkill™"
             subtitle="Real feedback from our community."
           />
           <blockquote className="testimonial">
             <p>
               &quot;The webinar provided me absolute clarity on what career path I should take and
               why. All my questions were answered. Looking forward to commencing the qualification
-              with Tillskill™’s support.&quot;
+              with TillSkill™’s support.&quot;
             </p>
             <footer>— Former intro session attendee</footer>
           </blockquote>
@@ -378,7 +380,7 @@ function UsCmaProgramContent() {
         <div className="container">
           <PageHeader
             title="Frequently asked questions"
-            subtitle="Quick answers about the US CMA and Tillskill™."
+            subtitle="Quick answers about the US CMA and TillSkill™."
           />
           <FAQAccordion items={cmaFAQs} />
         </div>
@@ -387,7 +389,7 @@ function UsCmaProgramContent() {
       {/* 13. Final CTA band */}
       <section className="cta-band">
         <div className="container">
-          <h2>Ready to become a US CMA with Tillskill™?</h2>
+          <h2>Ready to become a US CMA with TillSkill™?</h2>
           <p>Talk to an expert, join a free intro session, or enrol in the next batch.</p>
           <div className="cta-band-actions">
             <CTAButton to="/contact">Talk to an expert</CTAButton>
@@ -409,16 +411,16 @@ function FmaaProgramContent() {
           <div className="program-hero">
             <div className="program-hero-text">
               <PageHeader
-                title="FMAA with Tillskill™"
+                title="FMAA with TillSkill™"
                 subtitle="Foundational Management Accounting and Analytics to prepare you for advanced professional designations."
               />
             </div>
             <div className="program-hero-logo">
-              <img src={fmaaImg} alt="FMAA pathway with Tillskill™" />
+              <img src={fmaaImg} alt="FMAA pathway with TillSkill™" />
             </div>
           </div>
           <p>
-            The FMAA pathway at Tillskill™ is designed for learners who want to build a strong base
+            The FMAA pathway at TillSkill™ is designed for learners who want to build a strong base
             in accounting, cost management, decision-making and analytics before stepping into
             advanced qualifications such as the US CMA.
           </p>
@@ -440,7 +442,7 @@ function FmaaProgramContent() {
       <section className="section section-alt">
         <div className="container">
           <PageHeader
-            title="How FMAA works at Tillskill™"
+            title="How FMAA works at TillSkill™"
             subtitle="Concept clarity, application and analytics in a single learning track."
           />
           <div className="three-column-cards">
@@ -480,16 +482,16 @@ function CscaProgramContent() {
           <div className="program-hero">
             <div className="program-hero-text">
               <PageHeader
-                title="CSCA-focused learning with Tillskill™"
+                title="CSCA-focused learning with TillSkill™"
                 subtitle="Deepen your strategic analysis and competitive positioning skills."
               />
             </div>
             <div className="program-hero-logo">
-              <img src={cscaImg} alt="CSCA strategy-focused learning with Tillskill™" />
+              <img src={cscaImg} alt="CSCA strategy-focused learning with TillSkill™" />
             </div>
           </div>
           <p>
-            Tillskill™ offers a specialised track for learners who want to strengthen their skills
+            TillSkill™ offers a specialised track for learners who want to strengthen their skills
             in strategy, competitive analysis and long-term value creation, complementing
             management accounting knowledge with strategic thinking.
           </p>
@@ -534,7 +536,7 @@ function CscaProgramContent() {
             <article className="info-card">
               <h3>Mentor-led discussions</h3>
               <p>
-                Participate in guided discussions with Tillskill™ mentors who have experience in
+                Participate in guided discussions with TillSkill™ mentors who have experience in
                 strategy, consulting, or leadership roles.
               </p>
             </article>
@@ -553,16 +555,16 @@ function ExcelProgramContent() {
           <div className="program-hero">
             <div className="program-hero-text">
               <PageHeader
-                title="Excel and Finance with Tillskill™"
+                title="Excel and Finance with TillSkill™"
                 subtitle="Hands-on spreadsheet skills for modern finance and analytics roles."
               />
             </div>
-            <div className="program-hero-logo">
-              <img src={excelFinanceImg} alt="Excel and Finance with Tillskill™" />
-            </div>
+            {/* <div className="program-hero-logo">
+              <img src={excelFinanceImg} alt="Excel and Finance with TillSkill™" />
+            </div> */}
           </div>
           <p>
-            The Excel and Finance program at Tillskill™ is designed for learners who want to move
+            The Excel and Finance program at TillSkill™ is designed for learners who want to move
             beyond basic formulas into structured financial analysis, modelling and reporting that
             supports real business decisions.
           </p>
@@ -607,7 +609,7 @@ function ExcelProgramContent() {
             <article className="info-card">
               <h3>Guided practice</h3>
               <p>
-                Work through exercises with the support of Tillskill™ mentors so you can ask
+                Work through exercises with the support of TillSkill™ mentors so you can ask
                 questions and correct mistakes in real time.
               </p>
             </article>
@@ -624,11 +626,11 @@ function OtherProgramsContent() {
       <section className="section">
         <div className="container">
           <PageHeader
-            title="Other programs with Tillskill™"
+            title="Other programs with TillSkill™"
             subtitle="Specialised workshops and pathways for emerging and experienced finance professionals."
           />
           <p>
-            Beyond our flagship programs, Tillskill™ also develops short courses and workshops in
+            Beyond our flagship programs, TillSkill™ also develops short courses and workshops in
             areas such as leadership for finance professionals, communication for analysts, and
             specialised technical topics requested by our learner community.
           </p>
@@ -653,7 +655,7 @@ function OtherProgramsContent() {
             <article className="info-card">
               <h3>Human-centred design</h3>
               <p>
-                Every new program at Tillskill™ is built around real learner questions and
+                Every new program at TillSkill™ is built around real learner questions and
                 workplace scenarios, not just theoretical demand.
               </p>
             </article>
@@ -667,7 +669,7 @@ function OtherProgramsContent() {
             <article className="info-card">
               <h3>Community-driven topics</h3>
               <p>
-                Suggestions from the Tillskill™ community directly influence what we build next,
+                Suggestions from the TillSkill™ community directly influence what we build next,
                 keeping our catalogue relevant and practical.
               </p>
             </article>

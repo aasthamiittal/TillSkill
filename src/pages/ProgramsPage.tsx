@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { PageHeader } from '../components/Common/PageHeader'
 import { programSlugs } from '../data/programContent'
@@ -13,7 +14,7 @@ export function ProgramsPage() {
           />
           <p className="programs-intro">
             Choose a program to view details. All our programs share the same rigorous approach and
-            Tillskill™ advantage.
+            TillSkill™ advantage.
           </p>
           <ul className="programs-list">
             {programSlugs.map(({ slug, label }) => (

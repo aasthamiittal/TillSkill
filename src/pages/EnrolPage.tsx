@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { PageHeader } from '../components/Common/PageHeader'
 import { enrolCourses } from '../data/courses'
 import { CourseCard } from '../components/Enrol/CourseCard'
@@ -30,7 +30,7 @@ export function EnrolPage() {
       <section className="section">
         <div className="container">
           <PageHeader
-            title="Enrol with Tillskill™"
+            title="Intro Sessions"
             subtitle="Choose the cohort or session that fits your goals and schedule."
           />
           <p>
@@ -69,13 +69,11 @@ export function EnrolPage() {
                 isSale: course.isSale,
                 originalPriceDisplay: course.originalPriceDisplay,
               }}
+              registerSlug={course.backendSlug}
               onAddToCart={() => {
-                addToCart({
-                  id: course.id,
-                  title: course.title,
-                  price: course.priceDisplay,
-                })
-                showToast('Item added successfully')
+                // addToCart logic commented out – button now shows "Register for Free"
+                // addToCart({ id: course.id, title: course.title, price: course.priceDisplay })
+                // showToast('Item added successfully')
               }}
             />
           ))}

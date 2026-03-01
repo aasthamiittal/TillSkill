@@ -1,8 +1,10 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { CTAButton } from '../components/Common/CTAButton'
 import { PageHeader } from '../components/Common/PageHeader'
 import { FAQAccordion, type FAQItem } from '../components/Common/FAQAccordion'
-import logo from '../assets/logo.png'
+
+const boardroomImage = new URL('../assets/Boardroom-img.png', import.meta.url).href
 
 const cmaFAQs: FAQItem[] = [
   {
@@ -11,7 +13,7 @@ const cmaFAQs: FAQItem[] = [
       <p>
         The US CMA suits finance and accounting students, early-career professionals in reporting
         or FP&amp;A, and anyone aiming for management accounting or business partnering roles in
-        MNCs, consulting, or shared services. You can start preparing with Tillskill™ after Grade 12
+        MNCs, consulting, or shared services. You can start preparing with TillSkill™ after Grade 12
         while completing your degree.
       </p>
     ),
@@ -21,7 +23,7 @@ const cmaFAQs: FAQItem[] = [
     answer: (
       <p>
         Many diligent learners complete their prep in 6–8 months. Actual timelines depend on your
-        schedule, exam windows, and study pace. Tillskill™ offers structured batches and flexible
+        schedule, exam windows, and study pace. TillSkill™ offers structured batches and flexible
         access to recorded sessions so you can balance work or studies.
       </p>
     ),
@@ -31,17 +33,17 @@ const cmaFAQs: FAQItem[] = [
     answer: (
       <p>
         The US CMA has two parts: Part 1 – Financial Planning, Performance and Analytics; Part 2 –
-        Strategic Financial Management. Each part is a computer-based exam. Tillskill™ prepares you
+        Strategic Financial Management. Each part is a computer-based exam. TillSkill™ prepares you
         with curriculum aligned to the latest IMA exam specifications and plenty of practice
         questions and mocks.
       </p>
     ),
   },
   {
-    question: 'How does Tillskill™ support differ from self-study?',
+    question: 'How does TillSkill™ support differ from self-study?',
     answer: (
       <p>
-        Tillskill™ gives you live classes, 1:1 doubt clearing, mock exams, and mentors with global
+        TillSkill™ gives you live classes, 1:1 doubt clearing, mock exams, and mentors with global
         boardroom experience. You get structure, accountability, and the &quot;why&quot; behind
         concepts—not just content. As an IMA Silver Approved Learning Partner, we use approved
         learning and testing material.
@@ -82,17 +84,14 @@ export function HomePage() {
               </Link>
             </div>
             <p className="hero-tagline">
-              Tillskill™ - Till Your Skill, Till You Skill
+              TillSkill™ - Till Your Skill, Till You Skill
             </p>
           </div>
           <div className="hero-visual">
-            <div className="hero-logo-card">
-              <img src={logo} alt="Tillskill™ logo" className="hero-logo-image" />
-              <p className="hero-logo-caption">
-                Finance and management coaching from mentors with global boardroom
-                experience.
-              </p>
-            </div>
+            {/* <div className="hero-logo-card"> */}
+              <img src={boardroomImage} alt="Boardroom – global management accounting" className="hero-logo-image" />
+
+            {/* </div> */}
           </div>
         </div>
       </section>
@@ -159,15 +158,15 @@ export function HomePage() {
             <div className="highlight-card">
               <h2>The US CMA Certification</h2>
               <p>
-                Fast-track your global accounting career with Tillskill™. The CMA qualification is the
+                Fast-track your global accounting career with TillSkill™. The CMA qualification is the
                 global benchmark for management accountants and financial professionals.
               </p>
               <CTAButton to="/programs">Discover the US CMA Path</CTAButton>
             </div>
             <div className="highlight-card">
-              <h2>The Tillskill™ Difference</h2>
+              <h2>The TillSkill™ Difference</h2>
               <p>
-                Tillskill™ is not just another text/video-dump website. We are a community of mentors
+                TillSkill™ is not just another text/video-dump website. We are a community of mentors
                 and future leaders.
               </p>
               <ul>
@@ -200,12 +199,12 @@ export function HomePage() {
           />
           <div className="two-column">
             <p>
-              Tillskill™ as an IMA Silver Approved Learning Partner offers preparation through an
+              TillSkill™ as an IMA Silver Approved Learning Partner offers preparation through an
               approved publisher of learning and testing material. This accreditation is your
               guarantee that our curriculum and instruction meet the highest global standards.
             </p>
             <p>
-              Choosing Tillskill™ gives you a critical edge over candidates relying on unverified
+              Choosing TillSkill™ gives you a critical edge over candidates relying on unverified
               providers. With us, you are not just taking a course; you are securing a professional
               advantage designed to help you pass on your first attempt.
             </p>
@@ -275,11 +274,11 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* NEW: How you learn with Tillskill™ */}
+      {/* NEW: How you learn with TillSkill™ */}
       <section className="section section-alt">
         <div className="container">
           <PageHeader
-            title="How you learn with Tillskill™"
+            title="How you learn with TillSkill™"
             subtitle="Structured, mentor-led preparation so you stay exam-ready and career-ready."
           />
           <div className="three-column-cards">
@@ -293,7 +292,7 @@ export function HomePage() {
             <article className="info-card">
               <h3>1:1 doubt clearing</h3>
               <p>
-                Personalised guidance from Tillskill™ mentors so you understand the &quot;why&quot;
+                Personalised guidance from TillSkill™ mentors so you understand the &quot;why&quot;
                 and &quot;how&quot;, not just the &quot;what&quot;.
               </p>
             </article>
@@ -318,7 +317,7 @@ export function HomePage() {
           <div className="two-column">
             <p>
               The US CMA opens doors to management accountant, FP&amp;A analyst, finance manager,
-              and business partner roles in MNCs, consulting firms, and shared services. Tillskill™
+              and business partner roles in MNCs, consulting firms, and shared services. TillSkill™
               prepares you for the exam and for the interview and workplace scenarios that follow.
             </p>
             <p>
@@ -333,7 +332,7 @@ export function HomePage() {
       <section className="section section-alt">
         <div className="container">
           <PageHeader
-            title="How to enrol with Tillskill™"
+            title="How to enrol with TillSkill™"
             subtitle="Choose your program, talk to a mentor, and start your CMA journey."
           />
           <div className="cta-row" style={{ justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -352,14 +351,14 @@ export function HomePage() {
       <section className="section">
         <div className="container">
           <PageHeader
-            title="What learners say about Tillskill™"
+            title="What learners say about TillSkill™"
             subtitle="Real feedback from our community."
           />
           <blockquote className="testimonial">
             <p>
               &quot;The webinar provided me absolute clarity on what career path I should take and
               why. All my questions were answered. Looking forward to commencing the qualification
-              with Tillskill™’s support.&quot;
+              with TillSkill™’s support.&quot;
             </p>
             <footer>— Former intro session attendee</footer>
           </blockquote>
@@ -371,7 +370,7 @@ export function HomePage() {
         <div className="container">
           <PageHeader
             title="Frequently asked questions"
-            subtitle="Quick answers about the US CMA and Tillskill™."
+            subtitle="Quick answers about the US CMA and TillSkill™."
           />
           <FAQAccordion items={cmaFAQs} />
         </div>
@@ -380,7 +379,7 @@ export function HomePage() {
       {/* NEW: Final CTA band */}
       {/* <section className="cta-band">
         <div className="container">
-          <h2>Ready to become a US CMA with Tillskill™?</h2>
+          <h2>Ready to become a US CMA with TillSkill™?</h2>
           <p>Talk to an expert, join a free intro session, or enrol in the next batch.</p>
           <div className="cta-band-actions">
             <CTAButton to="/contact">Talk to an expert</CTAButton>
