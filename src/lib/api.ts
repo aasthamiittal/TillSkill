@@ -95,6 +95,27 @@ export const authApi = {
     });
   },
 
+  async registerStudent(payload: {
+    email: string;
+    password: string;
+    firstName?: string;
+    lastName?: string;
+    name?: string;
+    phone?: string;
+    contactAddress?: string;
+    timezone?: string;
+    streamOfEducation?: string;
+    qualification?: string;
+    courseInterest?: string;
+    infoSessionId?: string;
+    englishComfortable?: string;
+  }): Promise<AuthResponse> {
+    return request<AuthResponse>('/api/auth/register', {
+      method: 'POST',
+      body: payload,
+    });
+  },
+
   async registerCorporate(payload: {
     organisationName: string;
     contactPersonName: string;

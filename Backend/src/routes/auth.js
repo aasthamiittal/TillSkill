@@ -22,8 +22,8 @@ function signToken(user) {
   return jwt.sign(payload, secret, { expiresIn });
 }
 
-// Student registration (FormData: text fields + optional resume file)
-router.post('/register', upload.single('resume'), async (req, res, next) => {
+// Student registration (JSON body; resume not supported on serverless)
+router.post('/register', async (req, res, next) => {
   try {
     const body = req.body || {};
     const email = (body.email || '').trim().toLowerCase();
@@ -49,12 +49,6 @@ router.post('/register', upload.single('resume'), async (req, res, next) => {
       return res.status(409).json({ message: 'User already exists' });
     }
 
-    const resumePath = req.file
-      ? isNetlify
-        ? undefined
-        : req.file.path
-      : undefined;
-
     const user = await User.create({
       email,
       password,
@@ -69,7 +63,6 @@ router.post('/register', upload.single('resume'), async (req, res, next) => {
       courseInterest: courseInterest || undefined,
       infoSessionId: infoSessionId || undefined,
       englishComfortable: englishComfortable || undefined,
-      resumePath: resumePath || undefined,
       role: 'student',
     });
 
