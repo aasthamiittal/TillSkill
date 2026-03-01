@@ -4,12 +4,17 @@
  */
 
 const path = require('path');
-
-// Backend path: from repo root (Netlify includes Backend via included_files; cwd is often repo root)
-const backendPath = path.resolve(__dirname, '../../Backend');
-const backendPathFromCwd = path.join(process.cwd(), 'Backend');
 const fs = require('fs');
-const resolvedBackendPath = fs.existsSync(backendPath) ? backendPath : backendPathFromCwd;
+
+// Backend path: Netlify puts included_files at the bundle root, so Backend may be next to this file
+// or at repo root relative to cwd/__dirname. Try multiple candidates.
+const backendCandidates = [
+  path.join(__dirname, 'Backend'),
+  path.resolve(__dirname, '../../Backend'),
+  path.join(process.cwd(), 'Backend'),
+];
+const resolvedBackendPath = backendCandidates.find((p) => fs.existsSync(p)) || backendCandidates[0];
+
 require('dotenv').config({ path: path.join(resolvedBackendPath, '../.env') });
 
 let app = null;
@@ -45,10 +50,12 @@ module.exports.handler = async (event, context) => {
   try {
     loadApp();
   } catch (loadErr) {
-    console.error('API load error:', loadErr.message || loadErr);
+    const message = loadErr && typeof loadErr.message === 'string' ? loadErr.message : 'Server configuration error';
+    console.error('API load error:', message, loadErr);
     return jsonResponse(500, {
       message: 'Server configuration error',
-      detail: process.env.NODE_ENV === 'development' ? loadErr.message : undefined,
+      detail: message,
+      debug: { resolvedBackendPath, exists: fs.existsSync(resolvedBackendPath) },
     });
   }
 
@@ -58,6 +65,7 @@ module.exports.handler = async (event, context) => {
     console.error('DB connection error:', dbErr.message || dbErr);
     return jsonResponse(500, {
       message: process.env.MONGO_URI ? 'Database connection failed' : 'Server misconfiguration: MONGO_URI not set',
+      detail: dbErr && typeof dbErr.message === 'string' ? dbErr.message : undefined,
     });
   }
 
