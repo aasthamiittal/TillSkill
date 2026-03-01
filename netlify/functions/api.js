@@ -27,6 +27,18 @@ const handler = serverless(app, {
 });
 
 module.exports.handler = async (event, context) => {
-  await ensureDb();
-  return handler(event, context);
+  try {
+    await ensureDb();
+    return await handler(event, context);
+  } catch (err) {
+    console.error('API function error:', err.message || err);
+    const message = !process.env.MONGO_URI
+      ? 'Server misconfiguration: database not configured'
+      : 'Internal server error';
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message }),
+      headers: { 'Content-Type': 'application/json' },
+    };
+  }
 };
