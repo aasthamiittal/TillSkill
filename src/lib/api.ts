@@ -1,4 +1,9 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? (import.meta.env.DEV ? 'http://localhost:4000' : '');
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? (import.meta.env.DEV ? 'http://localhost:4000' : '')).replace(/\/+$/, '');
+
+function apiUrl(path: string) {
+  const p = path.startsWith('/') ? path : `/${path}`;
+  return API_BASE_URL ? `${API_BASE_URL}${p}` : p;
+}
 
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
@@ -20,7 +25,7 @@ async function request<T>(
     headers.Authorization = `Bearer ${token}`;
   }
 
-  const res = await fetch(`${API_BASE_URL}${path}`, {
+  const res = await fetch(apiUrl(path), {
     method,
     headers,
     body: body ? JSON.stringify(body) : undefined,
@@ -59,7 +64,7 @@ export const authApi = {
     if (token) {
       headers.Authorization = `Bearer ${token}`;
     }
-    const res = await fetch(`${API_BASE_URL}/api/auth/register`, {
+    const res = await fetch(apiUrl('/api/auth/register'), {
       method: 'POST',
       headers,
       body: formData,
