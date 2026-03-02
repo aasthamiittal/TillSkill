@@ -118,7 +118,7 @@ export function TermsAndConditionsPage() {
             <li>
               <strong>Liability Cap:</strong> TillSkill™&apos;s maximum liability under this policy
               or any other claim is strictly limited to the amount paid by the student to
-              TillSkill™ for the course and excludes payment to the Approved Study Material
+              TillSkill™ for the course and after deducting administration fee, payment to the Approved Study Material
               provider, fee paid to IMA and other third party payments.
             </li>
             <li>

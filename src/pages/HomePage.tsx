@@ -75,13 +75,9 @@ export function HomePage() {
               Rise above accounting and reporting. Create value as a global management accountant.
             </p>
             <div className="hero-cta-group">
-              <CTAButton to="/enrol">Explore All Our Offerings</CTAButton>
               <CTAButton to="/intro-sessions" variant="outline">
                 Join a Free Intro Session
               </CTAButton>
-              <Link to="/intro-sessions" className="hero-connect">
-                Have doubts? Attend the Introductory Webinar →
-              </Link>
             </div>
             <p className="hero-tagline">
               TillSkill™ - Till Your Skill, Till You Skill
@@ -106,7 +102,7 @@ export function HomePage() {
             </div>
             <div className="stat-item">
               <span className="stat-value">2-part</span>
-              <span className="stat-label">Exam · US CMA</span>
+              <span className="stat-label">Examination</span>
             </div>
             <div className="stat-item">
               <span className="stat-value">Flexible</span>
@@ -140,7 +136,7 @@ export function HomePage() {
               </div>
               <div className="cma-summary-item">
                 <h3>1:1 doubt clearing</h3>
-                <p>Personalised guidance (on request) to keep you exam-ready at every step.</p>
+                <p>Personalised guidance available on request to keep you exam-ready at every step.</p>
               </div>
             </div>
             <p className="cma-summary-footnote">
@@ -333,10 +329,10 @@ export function HomePage() {
         <div className="container">
           <PageHeader
             title="How to enrol with TillSkill™"
-            subtitle="Choose your program, attend the Introductory Webinar to clear your doubts, and start your CMA journey."
+            subtitle="Attend the information webinar, ask questions to remove your doubts, enrol, and start your CMA journey."
           />
           <div className="cta-row" style={{ justifyContent: 'center', flexWrap: 'wrap' }}>
-            <CTAButton to="/programs">View all programs</CTAButton>
+            <CTAButton to="/programs">Attend the information webnair</CTAButton>
             <CTAButton to="/enrol" variant="secondary">
               Enrol for US CMA
             </CTAButton>

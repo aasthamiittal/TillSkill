@@ -180,7 +180,7 @@ function UsCmaProgramContent() {
             <div>
               <h3>Ideal for</h3>
               <ul>
-                <li>Commerce, finance and business students (from final year undergrad onwards)</li>
+                <li>Commerce, finance and business students (from undergrad onwards)</li>
                 <li>Working accountants and analysts aiming for FP&amp;A or controllership</li>
                 <li>Professionals targeting MNCs, consulting or shared services</li>
               </ul>
@@ -222,7 +222,7 @@ function UsCmaProgramContent() {
               </div>
               <div className="cma-summary-item">
                 <h3>Timeline</h3>
-                <p>9–15 months. Many diligent learners complete their prep in lesser time.*</p>
+                <p>Many diligent learners complete their prep in lesser time.*</p>
               </div>
               <div className="cma-summary-item">
                 <h3>Support</h3>
@@ -355,7 +355,7 @@ function UsCmaProgramContent() {
       </section>
 
       {/* 11. Testimonial */}
-      <section className="section section-alt">
+      {/* <section className="section section-alt">
         <div className="container">
           <PageHeader
             title="What learners say about TillSkill™"
@@ -370,7 +370,7 @@ function UsCmaProgramContent() {
             <footer>— Former intro session attendee</footer>
           </blockquote>
         </div>
-      </section>
+      </section> */}
 
       {/* 12. FAQ */}
       <section className="section">
