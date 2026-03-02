@@ -768,6 +768,7 @@ a:hover {
 
 .navbar-title {
   font-size: 1.12rem;
+  text-transform: none;
 }
 
 .navbar-toggle {
