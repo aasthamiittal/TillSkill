@@ -59,7 +59,7 @@ export const authApi = {
     if (token) {
       headers.Authorization = `Bearer ${token}`;
     }
-    const res = await fetch(`${API_BASE_URL}/api/auth/register`, {
+    const res = await fetch(`${API_BASE_URL}api/auth/register`, {
       method: 'POST',
       headers,
       body: formData,
@@ -84,7 +84,7 @@ export const authApi = {
     contactAddress?: string;
     phone?: string;
   }): Promise<AuthResponse> {
-    return request<AuthResponse>('/api/auth/register', {
+    return request<AuthResponse>('api/auth/register', {
       method: 'POST',
       body: payload,
     });
@@ -99,14 +99,14 @@ export const authApi = {
     message?: string;
     password: string;
   }): Promise<AuthResponse> {
-    return request<AuthResponse>('/api/auth/register-corporate', {
+    return request<AuthResponse>('api/auth/register-corporate', {
       method: 'POST',
       body: payload,
     });
   },
 
   async login(payload: { email: string; password: string }): Promise<AuthResponse> {
-    return request<AuthResponse>('/api/auth/login', {
+    return request<AuthResponse>('api/auth/login', {
       method: 'POST',
       body: payload,
     });
@@ -121,7 +121,7 @@ export const coursesApi = {
     return request<{
       course: { _id: string; slug: string; title: string; type: string; feeAmount?: number; currency?: string; wiseRemittanceDetails?: string };
       terms: { version: string; content: string } | null;
-    }>(`/api/courses/${slug}`);
+    }>(`api/courses/${slug}`);
   },
 
   async acceptTerms(
@@ -134,7 +134,7 @@ export const coursesApi = {
     return request<{
       message: string;
       termsVersion: string;
-    }>(`/api/courses/${slug}/accept-terms`, {
+    }>(`api/courses/${slug}/accept-terms`, {
       method: 'POST',
       token,
     });
@@ -147,7 +147,7 @@ export const subscriptionsApi = {
     token: string
   ): Promise<{ enrollmentId: string; checkoutUrl?: string; message: string }> {
     return request<{ enrollmentId: string; checkoutUrl?: string; message: string }>(
-      `/api/subscriptions/short/${slug}`,
+      `api/subscriptions/short/${slug}`,
       { method: 'POST', token }
     );
   },
@@ -157,7 +157,7 @@ export const subscriptionsApi = {
     token: string
   ): Promise<{ checkoutUrl: string }> {
     return request<{ checkoutUrl: string }>(
-      `/api/subscriptions/enrollment/${enrollmentId}/checkout-session`,
+      `api/subscriptions/enrollment/${enrollmentId}/checkout-session`,
       { method: 'POST', token }
     );
   },
@@ -176,7 +176,7 @@ export const subscriptionsApi = {
       invoiceNumber: string;
       wiseRemittanceDetails?: string;
       message: string;
-    }>(`/api/subscriptions/long/${slug}/initiate`, {
+    }>(`api/subscriptions/long/${slug}/initiate`, {
       method: 'POST',
       token,
     });
@@ -209,7 +209,7 @@ export const enrollmentsApi = {
         createdAt: string;
       }>;
       userId?: string;
-    }>('/api/me/enrollments', { token });
+    }>('api/me/enrollments', { token });
   },
 };
 
