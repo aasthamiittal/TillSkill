@@ -102,8 +102,8 @@ function UsCmaProgramContent() {
           </p>
           <div className="cta-row">
             <CTAButton to="/intro-sessions">Join a free US CMA intro session</CTAButton>
-            <CTAButton to="/contact" variant="outline">
-              Connect with a TillSkill™ mentor
+            <CTAButton to="/enrol" variant="outline">
+              Enrol for US CMA
             </CTAButton>
           </div>
         </div>
@@ -222,11 +222,11 @@ function UsCmaProgramContent() {
               </div>
               <div className="cma-summary-item">
                 <h3>Timeline</h3>
-                <p>Many complete prep in 6–8 months with consistent effort.</p>
+                <p>9–15 months. Many diligent learners complete their prep in lesser time.*</p>
               </div>
               <div className="cma-summary-item">
                 <h3>Support</h3>
-                <p>Live classes, recordings, mocks and 1:1 doubt clearing.</p>
+                <p>Live classes, recordings, mocks and 1:1 doubt clearing (on request).</p>
               </div>
             </div>
           </div>
@@ -251,8 +251,8 @@ function UsCmaProgramContent() {
             <article className="info-card">
               <h3>1:1 doubt clearing</h3>
               <p>
-                Personalised guidance from TillSkill™ mentors so you understand the &quot;why&quot;
-                and &quot;how&quot;.
+                Personalised guidance from TillSkill™ mentors (on request) so you understand the
+                &quot;why&quot; and &quot;how&quot;.
               </p>
             </article>
             <article className="info-card">
@@ -343,15 +343,12 @@ function UsCmaProgramContent() {
         <div className="container">
           <PageHeader
             title="How to enrol with TillSkill™"
-            subtitle="Talk to a mentor, join a free intro session, or enrol in the next batch."
+            subtitle="Attend the Introductory Webinar to clear your doubts, then enrol in the next batch."
           />
           <div className="cta-row" style={{ justifyContent: 'center', flexWrap: 'wrap' }}>
             <CTAButton to="/enrol">Enrol for US CMA</CTAButton>
             <CTAButton to="/intro-sessions" variant="secondary">
-              Join a free intro session
-            </CTAButton>
-            <CTAButton to="/contact" variant="outline">
-              Request a callback
+              Attend Introductory Webinar
             </CTAButton>
           </div>
         </div>
@@ -390,9 +387,9 @@ function UsCmaProgramContent() {
       <section className="cta-band">
         <div className="container">
           <h2>Ready to become a US CMA with TillSkill™?</h2>
-          <p>Talk to an expert, join a free intro session, or enrol in the next batch.</p>
+          <p>Have doubts? Attend the Introductory Webinar to get clarity, then enrol in the next batch.</p>
           <div className="cta-band-actions">
-            <CTAButton to="/contact">Talk to an expert</CTAButton>
+            <CTAButton to="/intro-sessions">Attend Introductory Webinar</CTAButton>
             <CTAButton to="/intro-sessions" variant="outline">
               Join free intro session
             </CTAButton>

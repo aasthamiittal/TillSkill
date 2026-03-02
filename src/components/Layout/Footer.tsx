@@ -21,16 +21,16 @@ export function Footer() {
         </nav>
         <div className="footer-meta">
           <p className="footer-copyright">
-            © {new Date().getFullYear()} TillSkill™. All Rights Reserved.
+         Copyright © {new Date().getFullYear()} TillSkill™. All Rights Reserved.
           </p>
           <div className="footer-legal">
             <p>
               TillSkill™ is an IMA (USA) Silver Approved Learning Partner. TillSkill™ or the US CMA
-              qualification offered by IMA, USA is in no way related to CMA Australia.
+              qualification offered by IMA <br/> USA is in no way related to CMA Australia.
             </p>
             <p>
               TillSkill™ offers non-NRT which will not lead to an Australian Qualification Framework
-              (AQF) qualification or statement of attainment.
+              (AQF) qualification or  <br/>statement of attainment.
             </p>
             <p>
               Please refer to our{' '}

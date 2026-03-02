@@ -10,7 +10,7 @@ export function TermsAndConditionsPage() {
         <div className="container terms-content">
           <PageHeader
             title="Terms and Conditions of Service"
-            subtitle="Last Updated: January 16, 2026 · Business Name: TillSkill™ · Jurisdiction: Victoria, Australia"
+            subtitle="Last Updated: March 1,2026 · Business Name: TillSkill™ · Jurisdiction: Victoria, Australia"
           />
 
           <h3>Welcome to TillSkill™</h3>
@@ -42,9 +42,9 @@ export function TermsAndConditionsPage() {
           <p>
             <strong>1.3 Nature of Certification:</strong> TillSkill™ does not issue any
             certification or diploma. However, upon successful completion of a preparatory course
-            or event, TillSkill™ students may receive a Certificate of Attendance. This certificate
-            is strictly for professional development verification and validates your participation.
-            It is not a formal qualification under the Australian law.
+            or event, the students/attendees may receive a Certificate of Attendance. This
+            certificate is strictly for professional development verification and validates your
+            participation. It is not a formal qualification under the Australian law.
           </p>
           <p>
             <strong>1.4 Third-Party Designations:</strong> TillSkill™ provides preparatory training
@@ -92,7 +92,10 @@ export function TermsAndConditionsPage() {
               Attempted the external examination within the immediate testing window following the
               course conclusion.
             </li>
-            <li>Provided official proof of the &quot;Fail&quot; result from the certifying body.</li>
+            <li>
+              Provided official proof of the &quot;Fail&quot; result from the certifying body along
+              with the performance report.
+            </li>
           </ul>
           <p>
             <strong>2.2 The Benefit:</strong> Eligible students will be granted free access to one
@@ -109,7 +112,8 @@ export function TermsAndConditionsPage() {
             </li>
             <li>
               <strong>Student Commitment:</strong> The student is expected to put in the necessary
-              effort to study for and attempt the next examination.
+              effort (which is monitored by their instructor at TillSkill™) to study for and attempt
+              the next examination.
             </li>
             <li>
               <strong>Liability Cap:</strong> TillSkill™&apos;s maximum liability under this policy
@@ -127,11 +131,11 @@ export function TermsAndConditionsPage() {
           <p>
             <strong>3.1 Standard Access Period:</strong> Unless otherwise stated in the specific
             course description, your access to the digital learning platform, recorded videos, and
-            course materials is valid for six (6) months from the date of subscription or the start
-            date of the cohort (whichever is later).
+            course materials is valid for six to twelve (6–12) months from the date of subscription
+            or the start date of the cohort (whichever is later).
           </p>
           <p>
-            <strong>3.2 Expiration:</strong> After 6 months, access will automatically terminate.
+            <strong>3.2 Expiration:</strong> After 6–12 months, access will automatically terminate.
             Extensions may be granted solely at the discretion of TillSkill™ management or under the
             terms of the Retake Assurance policy (Section 2).
           </p>
@@ -142,17 +146,28 @@ export function TermsAndConditionsPage() {
             Dollars (USD) unless explicitly stated otherwise.
           </p>
           <p>
-            <strong>4.2 Payment Methods:</strong> Online Payment: We accept major credit/debit cards
-            via our secure payment gateway. Bank Transfer / Wise: For students in regions with
-            banking restrictions, or who otherwise specifically request, we offer payment via direct
-            bank transfer or Wise.
+            <strong>4.2 Payment Methods:</strong>
           </p>
+          <ul>
+            <li>
+              <strong>Online Payment:</strong> We accept major credit/debit cards via our secure
+              payment gateway.
+            </li>
+            <li>
+              <strong>Bank Transfer / Wise:</strong> For students in regions with banking
+              restrictions, or who otherwise specifically request, we offer payment via direct bank
+              transfer or Wise.
+            </li>
+            <li>
+              Please check with your instructor for the mode of payment applicable to you.
+            </li>
+          </ul>
           <p>
-            <strong>4.3 Bank Charges (Sender Pays):</strong> If paying via Bank Transfer or Wise, the
-            student (Sender) bears all transaction fees and bank charges. You must instruct your bank
-            to use the &quot;OUR&quot; instruction code (Sender pays all fees). TillSkill™ must
-            receive the exact net amount listed on the invoice. If the amount received is short,
-            access will be withheld until the balance is cleared.
+            <strong>4.3 Bank Charges (Sender Pays):</strong> For all payments, the student (Sender)
+            bears all transaction fees and bank charges. You must instruct your bank to use the
+            &quot;OUR&quot; instruction code (Sender pays all fees). TillSkill™ must receive the
+            exact net amount listed on the invoice. If the amount received is short, access will be
+            withheld until the balance is cleared.
           </p>
           <p>
             <strong>4.4 One-Time Payment:</strong> Payments are generally one-time fees for the
@@ -193,9 +208,9 @@ export function TermsAndConditionsPage() {
           </p>
           <p>
             <strong>6.3 Prohibitions:</strong> You may not record live sessions, share login
-            credentials, or distribute our materials to third parties. Violation of this section
-            will result in immediate termination of access without refund, and you will be subject
-            to potential legal action.
+            credentials, or distribute our materials and recordings to third parties. Violation of
+            this section will result in immediate termination of access without refund, and you will
+            be subject to potential legal action.
           </p>
 
           <h3>7. Student Conduct</h3>
@@ -216,9 +231,6 @@ export function TermsAndConditionsPage() {
 
           <div className="cta-row">
             <CTAButton to="/intro-sessions">Attend our FREE WEBINAR</CTAButton>
-            <CTAButton to="/contact" variant="outline">
-              Contact us for personalised guidance
-            </CTAButton>
           </div>
           <p className="muted">
             <Link to="/about-us">Back to About Us</Link>

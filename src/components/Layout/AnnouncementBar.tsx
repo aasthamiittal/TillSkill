@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const STORAGE_KEY = 'tillskill-announcement-dismissed'
 
@@ -9,6 +9,7 @@ type AnnouncementBarProps = {
 
 export function AnnouncementBar({ onDismissed }: AnnouncementBarProps) {
   const [dismissed, setDismissed] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     try {
@@ -32,7 +33,8 @@ export function AnnouncementBar({ onDismissed }: AnnouncementBarProps) {
     }
   }
 
-  if (dismissed) return null
+  // Show the announcement panel only on the home page
+  if (dismissed || location.pathname !== '/') return null
 
   const message = (
     <>

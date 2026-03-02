@@ -134,8 +134,56 @@ export function RegistrationPage() {
       showToast('Passwords do not match')
       return
     }
-    if (!form.email || !form.password) {
-      showToast('Email and password are required')
+    if (!form.firstName.trim()) {
+      showToast('First name is required')
+      return
+    }
+    if (!form.lastName.trim()) {
+      showToast('Last name is required')
+      return
+    }
+    if (!form.email.trim()) {
+      showToast('Email is required')
+      return
+    }
+    if (!form.phone.trim()) {
+      showToast('Phone number is required')
+      return
+    }
+    if (!form.timezone) {
+      showToast('Please select your time zone')
+      return
+    }
+    if (!form.password) {
+      showToast('Password is required')
+      return
+    }
+    if (!form.confirmPassword) {
+      showToast('Please confirm your password')
+      return
+    }
+    if (!form.streamOfEducation) {
+      showToast('Please select your stream of education')
+      return
+    }
+    if (!form.qualification) {
+      showToast('Please select your qualification')
+      return
+    }
+    if (!form.courseInterest) {
+      showToast('Please select the course you are interested in')
+      return
+    }
+    if (!form.infoSessionId) {
+      showToast('Please select the info session you would like to attend')
+      return
+    }
+    if (!form.englishComfortable) {
+      showToast('Please confirm if you are comfortable with English')
+      return
+    }
+    if (!form.contactAddress.trim()) {
+      showToast('Contact address is required')
       return
     }
     setSubmitting(true)
@@ -433,6 +481,7 @@ export function RegistrationPage() {
                   First Name
                   <input
                     type="text"
+                    required
                     value={form.firstName}
                     onChange={(e) => setForm((f) => ({ ...f, firstName: e.target.value }))}
                     placeholder="First name"
@@ -442,6 +491,7 @@ export function RegistrationPage() {
                   Last Name
                   <input
                     type="text"
+                    required
                     value={form.lastName}
                     onChange={(e) => setForm((f) => ({ ...f, lastName: e.target.value }))}
                     placeholder="Last name"
@@ -463,6 +513,7 @@ export function RegistrationPage() {
                   Phone number with ISD Code
                   <input
                     type="tel"
+                    required
                     value={form.phone}
                     onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                     placeholder="e.g. +91 9876543210"
@@ -471,6 +522,7 @@ export function RegistrationPage() {
                 <label>
                   Your time zone
                   <select
+                    required
                     value={form.timezone}
                     onChange={(e) => setForm((f) => ({ ...f, timezone: e.target.value }))}
                   >
@@ -508,6 +560,7 @@ export function RegistrationPage() {
                 <label>
                   Stream of education
                   <select
+                    required
                     value={form.streamOfEducation}
                     onChange={(e) => setForm((f) => ({ ...f, streamOfEducation: e.target.value }))}
                   >
@@ -521,6 +574,7 @@ export function RegistrationPage() {
                 <label>
                   Qualification
                   <select
+                    required
                     value={form.qualification}
                     onChange={(e) => setForm((f) => ({ ...f, qualification: e.target.value }))}
                   >
@@ -539,6 +593,7 @@ export function RegistrationPage() {
                 <label>
                   Name of the course you are interested in
                   <select
+                    required
                     value={form.courseInterest}
                     onChange={(e) => setForm((f) => ({ ...f, courseInterest: e.target.value }))}
                   >
@@ -552,6 +607,7 @@ export function RegistrationPage() {
                 <label>
                   Info Session you would like to attend
                   <select
+                    required
                     value={form.infoSessionId}
                     onChange={(e) => setForm((f) => ({ ...f, infoSessionId: e.target.value }))}
                   >
@@ -568,6 +624,7 @@ export function RegistrationPage() {
                 <label>
                   All classes will be conducted in English. Are you comfortable with it?
                   <select
+                    required
                     value={form.englishComfortable}
                     onChange={(e) => setForm((f) => ({ ...f, englishComfortable: e.target.value }))}
                   >
@@ -578,6 +635,18 @@ export function RegistrationPage() {
                     ))}
                   </select>
                 </label>
+                <label>
+                  Contact address
+                  <input
+                    type="text"
+                    required
+                    value={form.contactAddress}
+                    onChange={(e) => setForm((f) => ({ ...f, contactAddress: e.target.value }))}
+                    placeholder="Your full postal address"
+                  />
+                </label>
+              </div>
+              <div className="form-row">
                 <label>
                   If you are working, attach your resume (PDF/Word, max 5MB)
                   <input

@@ -79,8 +79,8 @@ export function HomePage() {
               <CTAButton to="/intro-sessions" variant="outline">
                 Join a Free Intro Session
               </CTAButton>
-              <Link to="/contact" className="hero-connect">
-                Connect with an expert →
+              <Link to="/intro-sessions" className="hero-connect">
+                Have doubts? Attend the Introductory Webinar →
               </Link>
             </div>
             <p className="hero-tagline">
@@ -132,7 +132,7 @@ export function HomePage() {
               </div>
               <div className="cma-summary-item">
                 <h3>Typical timeline</h3>
-                <p>Many diligent learners complete their prep in 6–8 months.*</p>
+                <p>9–15 months. Many diligent learners complete their prep in lesser time.*</p>
               </div>
               <div className="cma-summary-item">
                 <h3>For students & professionals</h3>
@@ -140,7 +140,7 @@ export function HomePage() {
               </div>
               <div className="cma-summary-item">
                 <h3>1:1 doubt clearing</h3>
-                <p>Personalised guidance to keep you exam-ready at every step.</p>
+                <p>Personalised guidance (on request) to keep you exam-ready at every step.</p>
               </div>
             </div>
             <p className="cma-summary-footnote">
@@ -256,7 +256,7 @@ export function HomePage() {
             <div>
               <h3>Ideal for</h3>
               <ul>
-                <li>Commerce, finance and business students (from final year undergrad onwards)</li>
+                <li>Commerce, finance and business students (from Year 2 undergrad onwards)</li>
                 <li>Working accountants and analysts aiming for FP&amp;A or controllership</li>
                 <li>Professionals targeting MNCs, consulting or shared services</li>
               </ul>
@@ -292,8 +292,8 @@ export function HomePage() {
             <article className="info-card">
               <h3>1:1 doubt clearing</h3>
               <p>
-                Personalised guidance from TillSkill™ mentors so you understand the &quot;why&quot;
-                and &quot;how&quot;, not just the &quot;what&quot;.
+                Personalised guidance from TillSkill™ mentors (on request) so you understand the
+                &quot;why&quot; and &quot;how&quot;, not just the &quot;what&quot;.
               </p>
             </article>
             <article className="info-card">
@@ -333,35 +333,17 @@ export function HomePage() {
         <div className="container">
           <PageHeader
             title="How to enrol with TillSkill™"
-            subtitle="Choose your program, talk to a mentor, and start your CMA journey."
+            subtitle="Choose your program, attend the Introductory Webinar to clear your doubts, and start your CMA journey."
           />
           <div className="cta-row" style={{ justifyContent: 'center', flexWrap: 'wrap' }}>
             <CTAButton to="/programs">View all programs</CTAButton>
             <CTAButton to="/enrol" variant="secondary">
               Enrol for US CMA
             </CTAButton>
-            <CTAButton to="/contact" variant="outline">
-              Request a callback
+            <CTAButton to="/intro-sessions" variant="outline">
+              Attend Introductory Webinar
             </CTAButton>
           </div>
-        </div>
-      </section>
-
-      {/* NEW: Testimonials */}
-      <section className="section">
-        <div className="container">
-          <PageHeader
-            title="What learners say about TillSkill™"
-            subtitle="Real feedback from our community."
-          />
-          <blockquote className="testimonial">
-            <p>
-              &quot;The webinar provided me absolute clarity on what career path I should take and
-              why. All my questions were answered. Looking forward to commencing the qualification
-              with TillSkill™’s support.&quot;
-            </p>
-            <footer>— Former intro session attendee</footer>
-          </blockquote>
         </div>
       </section>
 
@@ -380,11 +362,11 @@ export function HomePage() {
       {/* <section className="cta-band">
         <div className="container">
           <h2>Ready to become a US CMA with TillSkill™?</h2>
-          <p>Talk to an expert, join a free intro session, or enrol in the next batch.</p>
+          <p>Have doubts? Attend the Introductory Webinar to get clarity, then enrol in the next batch.</p>
           <div className="cta-band-actions">
-            <CTAButton to="/contact">Talk to an expert</CTAButton>
-            <CTAButton to="/intro-sessions" variant="outline">
-              Join free intro session
+            <CTAButton to="/intro-sessions">Attend Introductory Webinar</CTAButton>
+            <CTAButton to="/enrol" variant="outline">
+              Enrol for US CMA
             </CTAButton>
           </div>
         </div>

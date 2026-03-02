@@ -17,8 +17,8 @@ export type CourseItem = {
 
 export const introSessions: CourseItem[] = [
   {
-    id: 'intro-6mar-9pm',
-    title: 'Info Session - 6 Mar 2026 - 9 pm UTC',
+    id: 'intro-7mar-aest',
+    title: 'Info Session - 7 Mar 2026 – 5 pm AEST / 6 am UTC',
     category: 'US CMA',
     description: 'FREE live webinar on the US CMA certification.',
     priceDisplay: 'USD 0.00',
@@ -26,17 +26,8 @@ export const introSessions: CourseItem[] = [
     subscriptionType: 'short',
   },
   {
-    id: 'intro-7mar-6am',
-    title: 'Info Session - 7 Mar 2026 - 6 am UTC',
-    category: 'US CMA',
-    description: 'FREE live webinar on the US CMA certification.',
-    priceDisplay: 'USD 0.00',
-    backendSlug: 'intro',
-    subscriptionType: 'short',
-  },
-  {
-    id: 'intro-7mar-6pm',
-    title: 'Info Session - 7 Mar 2026 - 6 pm UTC',
+    id: 'intro-8mar-aest',
+    title: 'Info Session - 8 Mar 2026 – 5 pm AEST / 6 am UTC',
     category: 'US CMA',
     description: 'FREE live webinar on the US CMA certification.',
     priceDisplay: 'USD 0.00',
